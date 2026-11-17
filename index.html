@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Mundo de Chani · Canciones para cantar, bailar y jugar</title>
-  <meta name="description" content="Bienvenidos al Mundo de Chani: canciones infantiles para cantar, bailar y jugar. Escuchá la playlist, el nuevo disco Las Hinchadas del Mundial y llevá a Chani a tu evento.">
+  <title>El Mundo de Chani · Show musical y de comedia para niños</title>
+  <meta name="description" content="¡Hola, Chulitos! Bienvenidos al Mundo de Chani: canciones, cuentos y manualidades para chicos. Mirá el show en Prime Video y Apple TV, y escuchá Las Hinchadas del Mundial.">
   <meta property="og:title" content="El Mundo de Chani">
-  <meta property="og:description" content="Canciones para cantar, bailar y jugar. ¡Ya disponible Las Hinchadas del Mundial!">
-  <meta property="og:image" content="img/og-image.jpg">
+  <meta property="og:description" content="Show musical y de comedia para niños. ¡Miralo en Prime Video y escuchá Las Hinchadas del Mundial!">
+  <meta property="og:image" content="https://elmundodechani.com/img/og-image.jpg">
+  <meta property="og:url" content="https://elmundodechani.com/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://elmundodechani.com/">
   <meta name="theme-color" content="#ff5fa8">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%96%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
@@ -31,10 +33,11 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="nav__links" id="navLinks">
+      <a href="#prime">El show</a>
+      <a href="#videos">Videos</a>
       <a href="#canciones">Canciones</a>
-      <a href="#mundial">Nuevo disco</a>
-      <a href="#chani">Conocé a Chani</a>
-      <a href="#shows">Shows</a>
+      <a href="#mundial">Mundial</a>
+      <a href="#chani">Chani</a>
       <a href="#escuchar" class="btn btn--small">¡Escuchar!</a>
     </nav>
   </header>
@@ -52,16 +55,21 @@
 
       <div class="hero__inner">
         <div class="hero__text">
-          <p class="hero__kicker">Bienvenidos a</p>
+          <p class="hero__kicker">¡Hola, Chulitos! Bienvenidos a</p>
           <h1 class="logo logo--big">
             <span class="logo__top">El mundo de</span>
             <span class="logo__name">Chani</span>
           </h1>
-          <p class="hero__lead">Canciones para cantar, bailar y jugar. ¡Un mundo lleno de colores, amigos y mucha música!</p>
+          <p class="hero__lead">Show musical y de comedia para niños. Acá adentro todo puede pasar: cantamos, bailamos, viajamos con cuentos y creamos manualidades increíbles.</p>
           <div class="hero__ctas">
-            <a href="#escuchar" class="btn">▶ Escuchar ahora</a>
-            <a href="#shows" class="btn btn--ghost">Chani en tu evento</a>
+            <a href="#prime" class="btn">▶ Mirá el show</a>
+            <a href="https://www.youtube.com/@ElmundodeChani?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn--ghost">Suscribite en YouTube</a>
           </div>
+          <ul class="stats">
+            <li><strong>46 mil</strong> Chulitos suscriptos</li>
+            <li><strong>+400</strong> videos</li>
+            <li><strong>+1,8 M</strong> de vistas</li>
+          </ul>
         </div>
         <div class="hero__img">
           <div class="hero__blob" aria-hidden="true"></div>
@@ -71,27 +79,87 @@
       <div class="wave" aria-hidden="true"></div>
     </section>
 
+    <!-- PRIME VIDEO -->
+    <section class="section prime" id="prime">
+      <div class="container prime__inner">
+        <div class="prime__text">
+          <span class="badge badge--prime">Disponible en Prime Video y Apple TV</span>
+          <h2 class="title title--left">El show de <span>Chani</span></h2>
+          <p>Episodios completos llenos de canciones, juegos y comedia, con Chani y sus amigos como Topa. Para mirar en familia, en la tele, la compu o el celu.</p>
+          <div class="hero__ctas">
+            <a href="https://www.primevideo.com/search/?phrase=El%20mundo%20de%20Chani" target="_blank" rel="noopener" class="btn btn--prime">Ver en Prime Video</a>
+            <a href="https://tv.apple.com/search?term=El%20mundo%20de%20Chani" target="_blank" rel="noopener" class="btn btn--apple">Ver en Apple TV</a>
+          </div>
+          <a href="https://www.youtube.com/playlist?list=PLTrBJxJSs6itzrW6XBvPZq_8d2wlTYJ1s" target="_blank" rel="noopener" class="link">Episodios completos en YouTube →</a>
+        </div>
+        <div class="prime__video">
+          <button class="yt" data-id="u1RGu2NfwUQ" aria-label="Reproducir: Guerra de Cosquillas con Topa, episodio 6">
+            <img src="https://i.ytimg.com/vi/u1RGu2NfwUQ/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+            <span class="yt__play" aria-hidden="true">▶</span>
+          </button>
+          <p class="yt__caption">Episodio 06 · Guerra de cosquillas con Topa</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section class="section videos" id="videos">
+      <div class="container">
+        <h2 class="title">Videoclips <span>de Chani</span></h2>
+        <p class="subtitle">¡Dale play, cantá y bailá!</p>
+        <div class="videos__grid">
+          <figure class="vcard">
+            <button class="yt" data-id="0tNTMUloHOs" aria-label="Reproducir: Mi tía Filomena"><img src="https://i.ytimg.com/vi/0tNTMUloHOs/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+            <figcaption>Mi tía Filomena</figcaption>
+          </figure>
+          <figure class="vcard">
+            <button class="yt" data-id="JQYnO-6M1Ag" aria-label="Reproducir: Juguetes"><img src="https://i.ytimg.com/vi/JQYnO-6M1Ag/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+            <figcaption>Ju, ju, juguetes</figcaption>
+          </figure>
+          <figure class="vcard">
+            <button class="yt" data-id="8beQOT4LufQ" aria-label="Reproducir: Ecoloco"><img src="https://i.ytimg.com/vi/8beQOT4LufQ/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+            <figcaption>Ecoloco</figcaption>
+          </figure>
+          <figure class="vcard">
+            <button class="yt" data-id="8h5-_IPDiw4" aria-label="Reproducir: Subite que te llevo"><img src="https://i.ytimg.com/vi/8h5-_IPDiw4/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+            <figcaption>Subite que te llevo</figcaption>
+          </figure>
+          <figure class="vcard">
+            <button class="yt" data-id="gEG-rVK6e-U" aria-label="Reproducir: Chatarra"><img src="https://i.ytimg.com/vi/gEG-rVK6e-U/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+            <figcaption>Chatarra</figcaption>
+          </figure>
+          <figure class="vcard">
+            <button class="yt" data-id="q2KRUC6MUKE" aria-label="Reproducir: Hola, hello, come vai"><img src="https://i.ytimg.com/vi/q2KRUC6MUKE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+            <figcaption>Hola, hello, come vai</figcaption>
+          </figure>
+        </div>
+        <div class="center">
+          <a href="https://www.youtube.com/@ElmundodeChani" target="_blank" rel="noopener" class="btn btn--youtube">Ir al canal de YouTube</a>
+        </div>
+      </div>
+    </section>
+
     <!-- CANCIONES -->
     <section class="section songs" id="canciones">
       <div class="container">
         <h2 class="title"><span>La playlist</span> de Chani</h2>
-        <p class="subtitle">¡Elegí tu favorita y a bailar!</p>
+        <p class="subtitle">Tocá tu favorita y ¡a bailar!</p>
         <ol class="songs__grid">
-          <li class="song"><span class="song__icon">💖</span>Chani Chani</li>
-          <li class="song"><span class="song__icon">🧸</span>Ju, ju, juguetes</li>
-          <li class="song"><span class="song__icon">🎀</span>Pinchiribín</li>
-          <li class="song"><span class="song__icon">👵</span>Mi tía Filomena</li>
-          <li class="song"><span class="song__icon">🚗</span>Subite que te llevo</li>
-          <li class="song"><span class="song__icon">🎃</span>Halloween</li>
-          <li class="song"><span class="song__icon">🌱</span>Ecoloco</li>
-          <li class="song"><span class="song__icon">💭</span>Lo que me pasa</li>
-          <li class="song"><span class="song__icon">👋</span>Hola, hello, come vai</li>
-          <li class="song"><span class="song__icon">🤖</span>Chatarra</li>
-          <li class="song"><span class="song__icon">🕺</span>La batalla del movimiento</li>
-          <li class="song"><span class="song__icon">🌟</span>Hago lo que quiero yo</li>
+          <li><a class="song" href="https://www.youtube.com/playlist?list=PLTrBJxJSs6ithSS3OiDvyS-ca_kWRw-l9" target="_blank" rel="noopener"><span class="song__icon">💖</span>Chani Chani</a></li>
+          <li><a class="song" href="https://www.youtube.com/watch?v=JQYnO-6M1Ag" target="_blank" rel="noopener"><span class="song__icon">🧸</span>Ju, ju, juguetes</a></li>
+          <li><a class="song" href="https://www.youtube.com/watch?v=l2Nzc474DFc" target="_blank" rel="noopener"><span class="song__icon">🎀</span>Pinchiribín</a></li>
+          <li><a class="song" href="https://www.youtube.com/watch?v=0tNTMUloHOs" target="_blank" rel="noopener"><span class="song__icon">👵</span>Mi tía Filomena</a></li>
+          <li><a class="song" href="https://www.youtube.com/watch?v=8h5-_IPDiw4" target="_blank" rel="noopener"><span class="song__icon">✈️</span>Subite que te llevo</a></li>
+          <li><a class="song" href="https://www.youtube.com/watch?v=yYbDeZD7U7U" target="_blank" rel="noopener"><span class="song__icon">🎃</span>Halloween</a></li>
+          <li><a class="song" href="https://www.youtube.com/watch?v=8beQOT4LufQ" target="_blank" rel="noopener"><span class="song__icon">🌱</span>Ecoloco</a></li>
+          <li><a class="song" href="https://www.youtube.com/watch?v=WxFtAFY3iig" target="_blank" rel="noopener"><span class="song__icon">💭</span>Lo que me pasa</a></li>
+          <li><a class="song" href="https://www.youtube.com/watch?v=q2KRUC6MUKE" target="_blank" rel="noopener"><span class="song__icon">👋</span>Hola, hello, come vai</a></li>
+          <li><a class="song" href="https://www.youtube.com/watch?v=gEG-rVK6e-U" target="_blank" rel="noopener"><span class="song__icon">🤖</span>Chatarra</a></li>
+          <li><a class="song" href="https://www.youtube.com/watch?v=49xNQcy9BHQ" target="_blank" rel="noopener"><span class="song__icon">🕺</span>La batalla del movimiento</a></li>
+          <li><a class="song" href="https://www.youtube.com/playlist?list=PLTrBJxJSs6ithSS3OiDvyS-ca_kWRw-l9" target="_blank" rel="noopener"><span class="song__icon">🌟</span>Hago lo que quiero yo</a></li>
         </ol>
         <div class="center">
-          <a href="https://www.youtube.com/results?search_query=El+mundo+de+Chani" target="_blank" rel="noopener" class="btn">Ver todos los videos</a>
+          <a href="https://linktw.in/CuCGel" target="_blank" rel="noopener" class="btn btn--spotify">Escuchar en Spotify</a>
         </div>
       </div>
     </section>
@@ -105,13 +173,13 @@
         <div class="mundial__text">
           <span class="badge">¡Ya disponible!</span>
           <h2 class="title title--left">Las Hinchadas <span>del Mundial</span></h2>
-          <p>Chani se pone la camiseta y viaja por el mundo con amigos de todos los países. Un disco para alentar, cantar y festejar juntos cada gol.</p>
+          <p>Chani se pone la camiseta y viaja por el mundo con amigos de todos los países. Un disco para alentar, cantar y festejar juntos cada gol: ¡de “Vamos Vamos Argentina” a “Japón ganbatte”!</p>
           <ul class="flags" aria-hidden="true">
             <li>🇦🇷</li><li>🇧🇷</li><li>🇪🇸</li><li>🇯🇵</li><li>🇮🇹</li><li>🇲🇽</li><li>🇨🇴</li><li>🇺🇾</li>
           </ul>
           <div class="hero__ctas">
-            <a href="https://open.spotify.com/search/El%20mundo%20de%20Chani" target="_blank" rel="noopener" class="btn btn--spotify">Escuchar en Spotify</a>
-            <a href="https://www.youtube.com/results?search_query=El+mundo+de+Chani+hinchadas+del+mundial" target="_blank" rel="noopener" class="btn btn--youtube">Ver en YouTube</a>
+            <a href="https://linktw.in/de0f67" target="_blank" rel="noopener" class="btn btn--spotify">Escuchar el disco</a>
+            <a href="https://www.youtube.com/watch?v=WV40kNYnLxY" target="_blank" rel="noopener" class="btn btn--youtube">Ver “Vamos Vamos Argentina”</a>
           </div>
         </div>
       </div>
@@ -122,11 +190,12 @@
       <div class="container about__inner">
         <div class="about__text">
           <h2 class="title title--left">Conocé a <span>Chani</span></h2>
-          <p>Chani es pura alegría: pelo rosa, sonrisa gigante y un corazón lleno de canciones. En su mundo todo se puede: jugar, imaginar, bailar y aprender cosas nuevas cada día.</p>
+          <p>Chani es pura alegría: pelo rosa, sonrisa gigante y un corazón lleno de canciones. En la comunidad de sus Chulitos siempre se canta, se ríe y uno se lleva algo lindo en el corazón.</p>
           <ul class="features">
-            <li><span>🎤</span><strong>Canta</strong> canciones pegadizas para toda la familia</li>
-            <li><span>💃</span><strong>Baila</strong> coreografías fáciles para copiar en casa</li>
-            <li><span>🌍</span><strong>Enseña</strong> valores, idiomas y cuidado del planeta</li>
+            <li><span>🎵</span><div><strong>Canciones</strong> originales para cantar y bailar juntos</div></li>
+            <li><span>📖</span><div><strong>Cuentos</strong> clásicos divertidísimos</div></li>
+            <li><span>🧩</span><div><strong>Manualidades</strong> y juegos para hacer en casa</div></li>
+            <li><span>🎬</span><div><strong>Shows</strong> completos en Prime Video y Apple TV</div></li>
           </ul>
         </div>
         <div class="about__imgs">
@@ -141,29 +210,23 @@
       <div class="container shows__card">
         <span class="float-in" aria-hidden="true">🎈</span>
         <h2 class="title">¡Chani en tu <span>evento</span>!</h2>
-        <p class="subtitle">Shows en vivo para cumpleaños, colegios, eventos y festivales. Música, juegos y mucha diversión.</p>
-        <a href="mailto:?subject=Show%20El%20Mundo%20de%20Chani" class="btn btn--big">Quiero contratar a Chani</a>
+        <p class="subtitle">Show musical y de comedia en vivo para cumpleaños, colegios, eventos y festivales.</p>
+        <a href="https://www.instagram.com/elmundodechani/" target="_blank" rel="noopener" class="btn btn--big">Escribinos por Instagram</a>
       </div>
     </section>
 
     <!-- ESCUCHAR -->
     <section class="section listen" id="escuchar">
       <div class="container">
-        <h2 class="title">Escuchá <span>a Chani</span></h2>
-        <p class="subtitle">En tu plataforma favorita</p>
+        <h2 class="title">Seguí <span>a Chani</span></h2>
+        <p class="subtitle">¡Sumate a la familia de los Chulitos!</p>
         <div class="platforms">
-          <a href="https://www.youtube.com/results?search_query=El+mundo+de+Chani" target="_blank" rel="noopener" class="platform platform--yt">
-            <span class="platform__icon">▶</span>YouTube
-          </a>
-          <a href="https://open.spotify.com/search/El%20mundo%20de%20Chani" target="_blank" rel="noopener" class="platform platform--sp">
-            <span class="platform__icon">♫</span>Spotify
-          </a>
-          <a href="https://music.apple.com/search?term=El%20mundo%20de%20Chani" target="_blank" rel="noopener" class="platform platform--am">
-            <span class="platform__icon"></span>Apple Music
-          </a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="platform platform--ig">
-            <span class="platform__icon">◎</span>Instagram
-          </a>
+          <a href="https://www.youtube.com/@ElmundodeChani" target="_blank" rel="noopener" class="platform platform--yt"><span class="platform__icon">▶</span>YouTube</a>
+          <a href="https://linktw.in/CuCGel" target="_blank" rel="noopener" class="platform platform--sp"><span class="platform__icon">♫</span>Spotify</a>
+          <a href="https://www.primevideo.com/search/?phrase=El%20mundo%20de%20Chani" target="_blank" rel="noopener" class="platform platform--pv"><span class="platform__icon">prime</span>Prime Video</a>
+          <a href="https://tv.apple.com/search?term=El%20mundo%20de%20Chani" target="_blank" rel="noopener" class="platform platform--atv"><span class="platform__icon">tv</span>Apple TV</a>
+          <a href="https://www.instagram.com/elmundodechani/" target="_blank" rel="noopener" class="platform platform--ig"><span class="platform__icon">◎</span>Instagram</a>
+          <a href="https://www.tiktok.com/@elmundodechani" target="_blank" rel="noopener" class="platform platform--tt"><span class="platform__icon">♪</span>TikTok</a>
         </div>
       </div>
     </section>
@@ -175,9 +238,9 @@
       <span class="logo__top">El mundo de</span>
       <span class="logo__name">Chani</span>
     </a>
-    <p>Hecho con 💖 por Once Loops · © <span id="year">2026</span></p>
+    <p>Creado por Onceloops Media y Babidibu Records · © <span id="year">2026</span></p>
   </footer>
 
-  <script src="script.js?v=1"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
