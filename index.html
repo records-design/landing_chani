@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Mundo de Chani · Canciones para cantar, bailar y jugar</title>
+  <meta name="description" content="Bienvenidos al Mundo de Chani: canciones infantiles para cantar, bailar y jugar. Escuchá la playlist, el nuevo disco Las Hinchadas del Mundial y llevá a Chani a tu evento.">
+  <meta property="og:title" content="El Mundo de Chani">
+  <meta property="og:description" content="Canciones para cantar, bailar y jugar. ¡Ya disponible Las Hinchadas del Mundial!">
+  <meta property="og:image" content="img/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#ff5fa8">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%96%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav__logo" aria-label="El Mundo de Chani, inicio">
+      <span class="logo__top">El mundo de</span>
+      <span class="logo__name">Chani</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks">
+      <a href="#canciones">Canciones</a>
+      <a href="#mundial">Nuevo disco</a>
+      <a href="#chani">Conocé a Chani</a>
+      <a href="#shows">Shows</a>
+      <a href="#escuchar" class="btn btn--small">¡Escuchar!</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="deco deco--cloud deco--c1" aria-hidden="true"></div>
+      <div class="deco deco--cloud deco--c2" aria-hidden="true"></div>
+      <span class="float f1" aria-hidden="true">💖</span>
+      <span class="float f2" aria-hidden="true">⭐</span>
+      <span class="float f3" aria-hidden="true">🎵</span>
+      <span class="float f4" aria-hidden="true">🌈</span>
+      <span class="float f5" aria-hidden="true">✨</span>
+
+      <div class="hero__inner">
+        <div class="hero__text">
+          <p class="hero__kicker">Bienvenidos a</p>
+          <h1 class="logo logo--big">
+            <span class="logo__top">El mundo de</span>
+            <span class="logo__name">Chani</span>
+          </h1>
+          <p class="hero__lead">Canciones para cantar, bailar y jugar. ¡Un mundo lleno de colores, amigos y mucha música!</p>
+          <div class="hero__ctas">
+            <a href="#escuchar" class="btn">▶ Escuchar ahora</a>
+            <a href="#shows" class="btn btn--ghost">Chani en tu evento</a>
+          </div>
+        </div>
+        <div class="hero__img">
+          <div class="hero__blob" aria-hidden="true"></div>
+          <img src="img/chani-hero.png" alt="Chani sonriendo y tirando un beso" width="788" height="1400" fetchpriority="high">
+        </div>
+      </div>
+      <div class="wave" aria-hidden="true"></div>
+    </section>
+
+    <!-- CANCIONES -->
+    <section class="section songs" id="canciones">
+      <div class="container">
+        <h2 class="title"><span>La playlist</span> de Chani</h2>
+        <p class="subtitle">¡Elegí tu favorita y a bailar!</p>
+        <ol class="songs__grid">
+          <li class="song"><span class="song__icon">💖</span>Chani Chani</li>
+          <li class="song"><span class="song__icon">🧸</span>Ju, ju, juguetes</li>
+          <li class="song"><span class="song__icon">🎀</span>Pinchiribín</li>
+          <li class="song"><span class="song__icon">👵</span>Mi tía Filomena</li>
+          <li class="song"><span class="song__icon">🚗</span>Subite que te llevo</li>
+          <li class="song"><span class="song__icon">🎃</span>Halloween</li>
+          <li class="song"><span class="song__icon">🌱</span>Ecoloco</li>
+          <li class="song"><span class="song__icon">💭</span>Lo que me pasa</li>
+          <li class="song"><span class="song__icon">👋</span>Hola, hello, come vai</li>
+          <li class="song"><span class="song__icon">🤖</span>Chatarra</li>
+          <li class="song"><span class="song__icon">🕺</span>La batalla del movimiento</li>
+          <li class="song"><span class="song__icon">🌟</span>Hago lo que quiero yo</li>
+        </ol>
+        <div class="center">
+          <a href="https://www.youtube.com/results?search_query=El+mundo+de+Chani" target="_blank" rel="noopener" class="btn">Ver todos los videos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MUNDIAL -->
+    <section class="section mundial" id="mundial">
+      <div class="container mundial__inner">
+        <div class="mundial__img">
+          <img src="img/hinchadas-mundial.jpg" alt="Afiche del disco Las Hinchadas del Mundial con Chani y chicos de distintos países" loading="lazy" width="885" height="1100">
+        </div>
+        <div class="mundial__text">
+          <span class="badge">¡Ya disponible!</span>
+          <h2 class="title title--left">Las Hinchadas <span>del Mundial</span></h2>
+          <p>Chani se pone la camiseta y viaja por el mundo con amigos de todos los países. Un disco para alentar, cantar y festejar juntos cada gol.</p>
+          <ul class="flags" aria-hidden="true">
+            <li>🇦🇷</li><li>🇧🇷</li><li>🇪🇸</li><li>🇯🇵</li><li>🇮🇹</li><li>🇲🇽</li><li>🇨🇴</li><li>🇺🇾</li>
+          </ul>
+          <div class="hero__ctas">
+            <a href="https://open.spotify.com/search/El%20mundo%20de%20Chani" target="_blank" rel="noopener" class="btn btn--spotify">Escuchar en Spotify</a>
+            <a href="https://www.youtube.com/results?search_query=El+mundo+de+Chani+hinchadas+del+mundial" target="_blank" rel="noopener" class="btn btn--youtube">Ver en YouTube</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONOCÉ A CHANI -->
+    <section class="section about" id="chani">
+      <div class="container about__inner">
+        <div class="about__text">
+          <h2 class="title title--left">Conocé a <span>Chani</span></h2>
+          <p>Chani es pura alegría: pelo rosa, sonrisa gigante y un corazón lleno de canciones. En su mundo todo se puede: jugar, imaginar, bailar y aprender cosas nuevas cada día.</p>
+          <ul class="features">
+            <li><span>🎤</span><strong>Canta</strong> canciones pegadizas para toda la familia</li>
+            <li><span>💃</span><strong>Baila</strong> coreografías fáciles para copiar en casa</li>
+            <li><span>🌍</span><strong>Enseña</strong> valores, idiomas y cuidado del planeta</li>
+          </ul>
+        </div>
+        <div class="about__imgs">
+          <img class="about__a" src="img/chani-show.jpg" alt="Chani con vestuario rojo y celeste" loading="lazy" width="800" height="533">
+          <img class="about__b" src="img/chani-alfombra.jpg" alt="Chani y su versión animada sobre una alfombra rosa" loading="lazy" width="1200" height="675">
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWS -->
+    <section class="section shows" id="shows">
+      <div class="container shows__card">
+        <span class="float-in" aria-hidden="true">🎈</span>
+        <h2 class="title">¡Chani en tu <span>evento</span>!</h2>
+        <p class="subtitle">Shows en vivo para cumpleaños, colegios, eventos y festivales. Música, juegos y mucha diversión.</p>
+        <a href="mailto:?subject=Show%20El%20Mundo%20de%20Chani" class="btn btn--big">Quiero contratar a Chani</a>
+      </div>
+    </section>
+
+    <!-- ESCUCHAR -->
+    <section class="section listen" id="escuchar">
+      <div class="container">
+        <h2 class="title">Escuchá <span>a Chani</span></h2>
+        <p class="subtitle">En tu plataforma favorita</p>
+        <div class="platforms">
+          <a href="https://www.youtube.com/results?search_query=El+mundo+de+Chani" target="_blank" rel="noopener" class="platform platform--yt">
+            <span class="platform__icon">▶</span>YouTube
+          </a>
+          <a href="https://open.spotify.com/search/El%20mundo%20de%20Chani" target="_blank" rel="noopener" class="platform platform--sp">
+            <span class="platform__icon">♫</span>Spotify
+          </a>
+          <a href="https://music.apple.com/search?term=El%20mundo%20de%20Chani" target="_blank" rel="noopener" class="platform platform--am">
+            <span class="platform__icon"></span>Apple Music
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="platform platform--ig">
+            <span class="platform__icon">◎</span>Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wave wave--top" aria-hidden="true"></div>
+    <a href="#inicio" class="logo logo--footer">
+      <span class="logo__top">El mundo de</span>
+      <span class="logo__name">Chani</span>
+    </a>
+    <p>Hecho con 💖 por Once Loops · © <span id="year">2026</span></p>
+  </footer>
+
+  <script src="script.js?v=1"></script>
+</body>
+</html>
