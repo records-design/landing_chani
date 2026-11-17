@@ -205,7 +205,9 @@ ol, ul { list-style: none; }
 
 /* Conocé a Chani */
 .about__inner { display: flex; flex-direction: column; gap: 40px; }
-.about__text p { font-size: 18px; text-align: center; margin: 14px 0 24px; }
+.about__text p { font-size: 18px; text-align: center; margin: 14px 0 0; }
+.about__text p + p { margin-top: 10px; }
+.about__text p:last-of-type { margin-bottom: 24px; }
 .features { display: grid; gap: 12px; }
 .features li { display: flex; align-items: center; gap: 14px; background: var(--white); border-radius: 20px; padding: 14px 18px; font-size: 17px; box-shadow: 0 5px 0 var(--sky); }
 .features li span { font-size: 26px; flex: none; }
