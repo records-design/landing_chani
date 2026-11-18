@@ -418,8 +418,6 @@ ol, ul { list-style: none; }
   30% { opacity: 1; }
   100% { transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1.3) rotate(25deg); opacity: 0; }
 }
-.twin__clues { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 34px; }
-.twin__clues li { background: var(--white); border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: 15px; box-shadow: 0 5px 0 rgba(217, 79, 146, .18); }
 
 /* ---------- 3D SOFT EN TODOS LOS RECURSOS (manual: volúmenes suaves) ---------- */
 :root {
@@ -436,7 +434,7 @@ ol, ul { list-style: none; }
     0 20px 30px -12px rgba(143, 82, 172, .42);
 }
 /* superficies blancas: tarjetas, chips, etiquetas y globo */
-.song, .features li, .platform, .twin__clues li, .hero__kicker, .magic__bubble, .nav__toggle {
+.song, .features li, .platform, .hero__kicker, .magic__bubble, .nav__toggle {
   background: var(--soft-white);
   box-shadow: var(--soft-white-shadow);
 }
@@ -458,6 +456,14 @@ ol, ul { list-style: none; }
 }
 /* marcos de video con volumen suave */
 .yt { box-shadow: 0 0 0 1px rgba(243, 205, 224, .8), 0 8px 0 #F3CDE0, 0 18px 30px -10px rgba(143, 82, 172, .4); }
+
+.twin__cta { display: flex; justify-content: center; margin-top: 24px; }
+.twin__stories { margin: 34px auto 0; max-width: 560px; }
+.twin__stories h3 { text-align: center; color: var(--lilac); font-size: 20px; margin-bottom: 14px; }
+.twin__stories-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.twin__stories figcaption { font-size: 14px; }
+.twin__stories .yt { border-width: 4px; border-radius: 18px; }
+.twin__stories .yt__play { width: 44px; height: 44px; font-size: 16px; }
 
 /* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
@@ -481,8 +487,7 @@ ol, ul { list-style: none; }
    ========================================================= */
 @media (min-width: 768px) {
   .container { padding: 0 32px; }
-  .twin__clues li { font-size: 17px; padding: 10px 20px; }
-  .magic__stage { --w: min(300px, calc((100vh - 260px) / 2.4)); }
+    .magic__stage { --w: min(300px, calc((100vh - 260px) / 2.4)); }
   .magic__bubble { font-size: 17px; max-width: 170px; left: 66%; }
   .stories__featured { gap: 28px; }
   .stories__featured figcaption { font-size: 18px; }
@@ -551,13 +556,15 @@ ol, ul { list-style: none; }
   /* ¡Yo también soy Chani!: en desktop, texto a la izquierda y Chani a la derecha, todo en una pantalla */
   .twin { padding: 50px 0; }
   .twin .container {
-    display: grid; grid-template-columns: minmax(0, 500px) auto; column-gap: 90px; justify-content: center; align-items: center; max-width: 1000px;
-    grid-template-areas: ". magic" "title magic" "sub magic" "clues magic" ". magic";
-    grid-template-rows: 1fr auto auto auto 1fr;
+    display: grid; grid-template-columns: minmax(0, 520px) auto; column-gap: 90px; justify-content: center; align-items: center; max-width: 1040px;
+    grid-template-areas: ". magic" "title magic" "sub magic" "cta magic" "stories magic" ". magic";
+    grid-template-rows: 1fr auto auto auto auto 1fr;
   }
   .twin .title { grid-area: title; text-align: left; }
   .twin .subtitle { grid-area: sub; text-align: left; margin: 14px 0 0; font-size: 20px; max-width: 460px; }
-  .twin__clues { grid-area: clues; justify-content: flex-start; margin-top: 26px; }
+  .twin__cta { grid-area: cta; justify-content: flex-start; }
+  .twin__stories { grid-area: stories; margin: 30px 0 0; max-width: none; }
+  .twin__stories h3 { text-align: left; }
   .twin .magic { grid-area: magic; }
   .magic__stage { --w: min(280px, calc((100vh - 200px) / 2.4)); }
   .carousel__item { flex-basis: calc((100% - 48px) / 4); }
