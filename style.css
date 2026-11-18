@@ -166,13 +166,25 @@ ol, ul { list-style: none; }
 
 
 .wave { position: absolute; left: 0; right: 0; bottom: -1px; height: 60px; z-index: 3;
-  background: var(--pink-bg);
+  background: #FFE9A8;
   -webkit-mask: radial-gradient(40px 30px at 40px 0, transparent 98%, #000) 0 0 / 80px 100% repeat-x;
           mask: radial-gradient(40px 30px at 40px 0, transparent 98%, #000) 0 0 / 80px 100% repeat-x;
   height: 30px;
 }
 
 /* ---------- SECCIONES ---------- */
+/* Fondos con color y textura, en la línea del hero */
+:root {
+  --pat-stars: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cpath d='M24 14l2.4 6.6L33 23l-6.6 2.4L24 32l-2.4-6.6L15 23l6.6-2.4z' fill='%23fff' fill-opacity='.75'/%3E%3Cpath d='M72 62l1.6 4.4L78 68l-4.4 1.6L72 74l-1.6-4.4L66 68l4.4-1.6z' fill='%23fff' fill-opacity='.6'/%3E%3Ccircle cx='76' cy='22' r='2.5' fill='%23fff' fill-opacity='.6'/%3E%3Ccircle cx='22' cy='74' r='2' fill='%23fff' fill-opacity='.5'/%3E%3C/svg%3E");
+  --pat-notes: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110' viewBox='0 0 110 110'%3E%3Cg fill='%23F46FAE' fill-opacity='.28'%3E%3Cpath d='M30 18v20.5a6 6 0 1 0 3 5.2V26h9v-8z'/%3E%3Cpath d='M78 66v18.5a6 6 0 1 0 3 5.2V72h9v-6z'/%3E%3C/g%3E%3Cpath d='M86 24c-1.6-2.4-5.6-2.4-5.6.8 0 2.4 3.2 4 5.6 6.4 2.4-2.4 5.6-4 5.6-6.4 0-3.2-4-3.2-5.6-.8z' fill='%23fff' fill-opacity='.8'/%3E%3C/svg%3E");
+}
+.prime { background-color: #C9E8FA; background-image: var(--pat-stars); background-size: 96px 96px; }
+.videos { background-color: #FFD3E7; background-image: var(--tile-hearts), var(--tile-grid); background-size: 88px 88px, 44px 44px, 44px 44px; }
+.stories { background-color: #E5CFF6; background-image: var(--pat-stars); background-size: 96px 96px; }
+.songs { background-color: #FFE9A8; background-image: var(--pat-notes); background-size: 110px 110px; }
+.about { background-color: #FFE9A8; background-image: var(--tile-hearts); background-size: 88px 88px; }
+.listen { background-color: #C9E8FA; background-image: var(--pat-stars); background-size: 96px 96px; }
+
 .section { padding: 70px 0; position: relative; }
 .title { font-weight: 700; font-size: 36px; line-height: 1.1; text-align: center; color: var(--ink); }
 .title span { font-family: var(--script); font-weight: 400; color: var(--pink); display: inline-block; transform: rotate(-3deg); }
@@ -232,13 +244,12 @@ ol, ul { list-style: none; }
 .platform--ig .platform__icon { background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7); }
 
 /* Footer */
-.footer { position: relative; background: var(--pink); color: var(--white); text-align: center; padding: 70px 16px 40px; margin-top: 40px; }
+.footer { position: relative; background: var(--pink); color: var(--white); text-align: center; padding: 70px 16px 40px; }
 .wave--top { top: -29px; bottom: auto; background: var(--pink); transform: rotate(180deg); }
 .footer p { margin-top: 14px; font-weight: 500; }
 .logo--footer .logo__name { -webkit-text-stroke-color: var(--pink-dark); text-shadow: 0 4px 0 var(--pink-dark); color: var(--white); }
 
 /* Prime Video */
-.prime { background: linear-gradient(180deg, var(--pink-bg) 0%, var(--sky-soft) 100%); }
 .prime__inner { display: flex; flex-direction: column; gap: 32px; align-items: center; }
 .prime__text { text-align: center; }
 .prime__text p { font-size: 18px; margin: 14px auto 22px; max-width: 520px; }
@@ -272,7 +283,6 @@ ol, ul { list-style: none; }
 .vcard .yt__play { width: 54px; height: 54px; font-size: 20px; }
 
 /* Cuentos */
-.stories { background: linear-gradient(180deg, var(--pink-bg) 0%, var(--lilac-soft) 100%); }
 .vcard { position: relative; }
 .vcard__new { position: absolute; top: -10px; left: -8px; z-index: 3; background: var(--yellow); color: var(--ink); font-weight: 700; font-size: 14px; padding: 4px 12px; border-radius: 999px; transform: rotate(-6deg); box-shadow: 0 4px 0 #e0a92a; }
 
