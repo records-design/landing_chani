@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=22">
+  <link rel="stylesheet" href="style.css?v=25">
 </head>
 <body>
 
@@ -34,6 +34,7 @@
     </button>
     <nav class="nav__links" id="navLinks">
       <a href="#chani">Conoceme</a>
+      <a href="#animada">Dibujito</a>
       <a href="#prime">Mi show</a>
       <a href="#videos">Videos</a>
       <a href="#cuentos">Cuentos</a>
@@ -89,6 +90,38 @@
           <img class="about__a" src="imagenes/chani-show.jpg" alt="Chani con vestuario rojo y celeste" loading="lazy" width="800" height="533">
           <img class="about__b" src="imagenes/chani-alfombra.jpg" alt="Chani y su versión animada sobre una alfombra rosa" loading="lazy" width="1200" height="675">
         </div>
+      </div>
+    </section>
+
+    <!-- CHANI ANIMADA -->
+    <section class="section twin" id="animada">
+      <div class="container">
+        <h2 class="title">¡Esta también <span>soy yo!</span></h2>
+        <p class="subtitle">Muchas veces me vas a ver en dibujito animado. ¡No te confundas, soy yo, Chani!</p>
+        <div class="magic">
+          <button class="magic__card" id="magicCard" type="button" aria-pressed="false" aria-label="Tocá para transformar a Chani en dibujito">
+            <span class="magic__inner">
+              <span class="magic__face magic__face--real">
+                <picture>
+                  <source srcset="imagenes/chani-real.webp" type="image/webp">
+                  <img src="imagenes/chani-real.png" alt="Chani con las manos en la cintura, con su vestido rosa y celeste" loading="lazy" width="609" height="900">
+                </picture>
+                <span class="magic__tag">Así soy yo</span>
+              </span>
+              <span class="magic__face magic__face--toon">
+                <img src="imagenes/chani-animada.webp" alt="Chani en dibujito animado" loading="lazy" width="330" height="700">
+                <span class="magic__tag">¡Tarán! Soy yo en dibujito</span>
+              </span>
+            </span>
+            <span class="magic__sparkles" aria-hidden="true"><span class="s1">✦</span><span class="s2">♥</span><span class="s3">★</span><span class="s4">✦</span><span class="s5">♥</span><span class="s6">★</span><span class="s7">✦</span><span class="s8">♥</span></span>
+          </button>
+          <button class="btn" type="button" id="magicBtn">✨ ¡Hacé magia!</button>
+        </div>
+        <ul class="twin__clues">
+          <li><span aria-hidden="true">💗</span> Mi pelo rosa</li>
+          <li><span aria-hidden="true">🎀</span> Mis rodetes con pompones</li>
+          <li><span aria-hidden="true">👗</span> Mi vestido rosa y celeste</li>
+        </ul>
       </div>
     </section>
 
@@ -266,6 +299,6 @@
     <p>Creado por Onceloops Media y Babidibu Records · © <span id="year">2026</span></p>
   </footer>
 
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>

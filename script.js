@@ -58,4 +58,21 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
   update();
 });
 
+// Chani animada: ¡hacé magia! (da vuelta la tarjeta)
+(() => {
+  const card = document.getElementById('magicCard');
+  const btn = document.getElementById('magicBtn');
+  if (!card || !btn) return;
+  const magic = () => {
+    const toon = !card.classList.contains('is-toon');
+    card.classList.remove('is-sparkling'); void card.offsetWidth; card.classList.add('is-sparkling');
+    card.classList.toggle('is-toon', toon);
+    card.setAttribute('aria-pressed', toon);
+    card.setAttribute('aria-label', toon ? 'Tocá para volver a ver a Chani de verdad' : 'Tocá para transformar a Chani en dibujito');
+    btn.textContent = toon ? '✨ ¡Volver a ser yo!' : '✨ ¡Hacé magia!';
+  };
+  card.addEventListener('click', magic);
+  btn.addEventListener('click', magic);
+})();
+
 document.getElementById('year').textContent = new Date().getFullYear();
