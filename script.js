@@ -58,30 +58,46 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
   update();
 });
 
-// Chani animada: aparece girando y "¡Hacé magia!" la va cambiando de personaje
+// Chani animada: aparece girando y con los botones de personajes se transforma
 (() => {
   const card = document.getElementById('magicCard');
-  const btn = document.getElementById('magicBtn');
-  if (!card || !btn) return;
+  if (!card) return;
   const faces = [...card.querySelectorAll('.magic__face')];
+  const avatars = [...document.querySelectorAll('.avatar[data-face]')];
   const cap = document.getElementById('magicCaption');
+  const watch = document.getElementById('watchTale');
+  const modal = document.getElementById('videoModal');
+  const frame = modal && modal.querySelector('.video-modal__frame');
   let n = 0, busy = false;
   const sparkle = () => { card.classList.remove('is-sparkling'); void card.offsetWidth; card.classList.add('is-sparkling'); };
-  const magic = () => {
-    if (busy) return; busy = true;
+  const setFace = k => {
+    if (busy || k === n) return; busy = true;
     card.classList.remove('is-waiting', 'is-entering', 'is-spinning'); void card.offsetWidth;
     card.classList.add('is-spinning'); sparkle();
+    avatars.forEach((a, m) => a.setAttribute('aria-pressed', m === k));
     setTimeout(() => {
       faces[n].classList.remove('is-active');
-      n = (n + 1) % faces.length;
+      n = k;
       faces[n].classList.add('is-active');
       if (cap) { cap.textContent = faces[n].dataset.say; cap.classList.remove('is-pop'); void cap.offsetWidth; cap.classList.add('is-pop'); }
-      if (faces[n].dataset.tale) document.dispatchEvent(new CustomEvent('chani:tale', { detail: Number(faces[n].dataset.tale) }));
+      if (watch) watch.hidden = !faces[n].dataset.video;
     }, 350);
     setTimeout(() => { card.classList.remove('is-spinning'); busy = false; }, 720);
   };
-  card.addEventListener('click', magic);
-  btn.addEventListener('click', magic);
+  avatars.forEach(a => a.addEventListener('click', () => setFace(Number(a.dataset.face))));
+  card.addEventListener('click', () => setFace((n + 1) % faces.length));
+  // "Mirá el cuento" abre el video del personaje en una ventana grande
+  if (watch && modal) {
+    const close = () => { frame.innerHTML = ''; if (modal.open) modal.close(); };
+    watch.addEventListener('click', () => {
+      const f = faces[n];
+      frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${f.dataset.video}?autoplay=1&rel=0" title="${f.dataset.title}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+      modal.showModal();
+    });
+    modal.querySelector('.video-modal__close').addEventListener('click', close);
+    modal.addEventListener('click', e => { if (e.target === modal) close(); });
+    modal.addEventListener('close', () => { frame.innerHTML = ''; });
+  }
   // entrada girando la primera vez que se ve
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     card.classList.add('is-waiting');
@@ -94,45 +110,6 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
     }, { threshold: .5 });
     io.observe(card);
   }
-})();
-
-// Personajes de los cuentos: rotan solos y "Mirá el cuento" abre el video
-(() => {
-  const box = document.getElementById('tales');
-  const modal = document.getElementById('videoModal');
-  if (!box || !modal) return;
-  const tales = [...box.querySelectorAll('.tale')];
-  const dotsBox = box.querySelector('.tales__dots');
-  const frame = modal.querySelector('.video-modal__frame');
-  let i = 0, timer = null;
-  const show = k => {
-    tales[i].classList.remove('is-active');
-    i = (k + tales.length) % tales.length;
-    tales[i].classList.add('is-active');
-    dotsBox.querySelectorAll('button').forEach((d, n) => d.setAttribute('aria-current', n === i));
-  };
-  const start = () => { if (tales.length > 1 && !timer) timer = setInterval(() => show(i + 1), 4500); };
-  const stop = () => { clearInterval(timer); timer = null; };
-  if (tales.length > 1) {
-    tales.forEach((t, n) => {
-      const d = document.createElement('button');
-      d.type = 'button'; d.setAttribute('aria-label', 'Ver ' + t.dataset.title);
-      d.addEventListener('click', () => { stop(); show(n); start(); });
-      dotsBox.appendChild(d);
-    });
-    show(0); start();
-    box.addEventListener('mouseenter', stop); box.addEventListener('mouseleave', start);
-    document.addEventListener('chani:tale', e => { stop(); show(e.detail); start(); });
-  }
-  const close = () => { frame.innerHTML = ''; if (modal.open) modal.close(); start(); };
-  tales.forEach(t => t.querySelector('.tale__play').addEventListener('click', () => {
-    stop();
-    frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${t.dataset.video}?autoplay=1&rel=0" title="${t.dataset.title}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
-    modal.showModal();
-  }));
-  modal.querySelector('.video-modal__close').addEventListener('click', close);
-  modal.addEventListener('click', e => { if (e.target === modal) close(); });
-  modal.addEventListener('close', () => { frame.innerHTML = ''; });
 })();
 
 document.getElementById('year').textContent = new Date().getFullYear();

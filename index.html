@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=37">
+  <link rel="stylesheet" href="style.css?v=38">
 </head>
 <body>
 
@@ -106,10 +106,10 @@
                 <span class="magic__face magic__face--toon is-active" data-say="¡Hola! Soy Chani animada">
                   <img src="imagenes/chani-animada.webp" alt="Chani animada" width="300" height="900">
                 </span>
-                <span class="magic__face magic__face--sirena" data-say="¡Ahora soy Chani Sirenita!" data-tale="1">
+                <span class="magic__face magic__face--sirena" data-say="¡Ahora soy Chani Sirenita!" data-video="3z8yO5MOOAk" data-title="La Sirenita">
                   <img src="imagenes/chani-sirenita.webp" alt="Chani animada vestida de sirenita" width="800" height="800" loading="lazy">
                 </span>
-                <span class="magic__face magic__face--dorothy" data-say="¡Y ahora soy Chani Dorothy!" data-tale="0">
+                <span class="magic__face magic__face--dorothy" data-say="¡Y ahora soy Chani Dorothy!" data-video="JpXklfQJtdo" data-title="El Mago de Oz">
                   <img src="imagenes/chani-dorothy.webp" alt="Chani animada vestida de Dorothy" width="383" height="700" loading="lazy">
                 </span>
                 <span class="magic__face magic__face--real" data-say="¡Sorpresa! Esta soy yo de verdad">
@@ -125,30 +125,14 @@
           </div>
         </div>
         <div class="twin__cta">
-          <button class="btn" type="button" id="magicBtn">✨ ¡Hacé magia!</button>
-        </div>
-        <div class="twin__stories">
-          <h3>¡Mirame animada en mis cuentos!</h3>
-          <div class="tales" id="tales">
-            <!-- Para sumar un personaje: copiar un <article class="tale"> con su imagen, cuento y video -->
-            <article class="tale is-active" data-video="JpXklfQJtdo" data-title="El Mago de Oz">
-              <div class="tale__pic"><img src="imagenes/chani-dorothy.webp" alt="Chani animada vestida de Dorothy, con su canasta" width="383" height="700" loading="lazy"></div>
-              <div class="tale__info">
-                <span class="tale__tag">El Mago de Oz</span>
-                <p class="tale__name">¡Soy Chani Dorothy!</p>
-                <button class="btn btn--small tale__play" type="button">▶ Mirá el cuento</button>
-              </div>
-            </article>
-            <article class="tale" data-video="3z8yO5MOOAk" data-title="La Sirenita">
-              <div class="tale__pic"><img src="imagenes/chani-sirenita.webp" alt="Chani animada vestida de sirenita" width="800" height="800" loading="lazy"></div>
-              <div class="tale__info">
-                <span class="tale__tag">La Sirenita</span>
-                <p class="tale__name">¡Soy Chani Sirenita!</p>
-                <button class="btn btn--small tale__play" type="button">▶ Mirá el cuento</button>
-              </div>
-            </article>
-            <div class="tales__dots" aria-hidden="true"></div>
+          <p class="twin__hint">✨ ¡Tocá y transformame!</p>
+          <div class="avatars">
+            <button class="avatar avatar--toon" type="button" data-face="0" aria-pressed="true"><span class="avatar__pic"><img src="imagenes/chani-animada.webp" alt="" loading="lazy"></span><span class="avatar__name">Chani</span></button>
+            <button class="avatar avatar--sirena" type="button" data-face="1" aria-pressed="false"><span class="avatar__pic"><img src="imagenes/chani-sirenita.webp" alt="" loading="lazy"></span><span class="avatar__name">Sirenita</span></button>
+            <button class="avatar avatar--dorothy" type="button" data-face="2" aria-pressed="false"><span class="avatar__pic"><img src="imagenes/chani-dorothy.webp" alt="" loading="lazy"></span><span class="avatar__name">Dorothy</span></button>
+            <button class="avatar avatar--real" type="button" data-face="3" aria-pressed="false"><span class="avatar__pic"><img src="imagenes/chani-real.webp" alt="" loading="lazy"></span><span class="avatar__name">¡De verdad!</span></button>
           </div>
+          <button class="btn btn--small twin__watch" type="button" id="watchTale" hidden>▶ Mirá el cuento</button>
         </div>
       </div>
     </section>
@@ -332,6 +316,6 @@
     <p>Creado por Onceloops Media y Babidibu Records · © <span id="year">2026</span></p>
   </footer>
 
-  <script src="script.js?v=17"></script>
+  <script src="script.js?v=18"></script>
 </body>
 </html>
