@@ -285,7 +285,6 @@ ol, ul { list-style: none; }
 
 /* Animaciones */
 @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-@keyframes floaty { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-10px) rotate(8deg); } }
 @keyframes morph {
   0%,100% { border-radius: 42% 58% 60% 40% / 45% 40% 60% 55%; }
   50% { border-radius: 58% 42% 40% 60% / 55% 60% 40% 45%; }
