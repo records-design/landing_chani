@@ -241,13 +241,13 @@ ol, ul { list-style: none; }
 .features li { display: flex; align-items: center; gap: 14px; background: var(--white); border-radius: 20px; padding: 14px 18px; font-size: 17px; box-shadow: 0 5px 0 var(--sky); }
 .features li span { font-size: 26px; flex: none; }
 .features strong { color: var(--pink-dark); margin-right: 4px; }
-.about__imgs { position: relative; padding-top: 30%; }
-.about__b { display: block; width: 72%; margin-left: auto; border-radius: var(--radius); border: 6px solid var(--white); box-shadow: var(--shadow); transform: rotate(3deg); }
-/* Chani en una tarjeta 3D soft con degradé de la paleta */
-.about__a { position: absolute; left: 0; bottom: -6%; width: 46%; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 28px; border: 6px solid var(--white); transform: rotate(-3deg);
-  background: radial-gradient(circle at 28% 16%, rgba(255,255,255,.45), transparent 42%), linear-gradient(160deg, #F46FAE 0%, #FFCC53 100%);
+.about__imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; padding-bottom: 30px; }
+/* fotos de Chani en tarjetas 3D soft con degradé de la paleta */
+.about__card { position: relative; aspect-ratio: 4 / 5.4; overflow: hidden; border-radius: 28px; border: 6px solid var(--white);
   box-shadow: 0 14px 30px rgba(143, 82, 172, .28), inset 0 -10px 22px rgba(143, 82, 172, .14), inset 0 8px 16px rgba(255, 255, 255, .7); }
-.about__a img { position: absolute; left: 50%; bottom: 0; height: 95%; width: auto; transform: translateX(-50%); filter: drop-shadow(0 8px 12px rgba(143, 82, 172, .3)); }
+.about__card--heart { transform: rotate(-3deg); background: radial-gradient(circle at 28% 16%, rgba(255,255,255,.45), transparent 42%), linear-gradient(160deg, #56B1E2 0%, #8F52AC 100%); }
+.about__card--edit { transform: rotate(3deg); margin-top: 30px; background: radial-gradient(circle at 28% 16%, rgba(255,255,255,.45), transparent 42%), linear-gradient(160deg, #F46FAE 0%, #FFCC53 100%); }
+.about__card img { position: absolute; left: 50%; bottom: 0; height: 94%; width: auto; max-width: none; transform: translateX(-50%); filter: drop-shadow(0 8px 12px rgba(143, 82, 172, .3)); }
 
 
 /* Escuchar */
