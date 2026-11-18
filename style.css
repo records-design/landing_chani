@@ -579,12 +579,12 @@ ol, ul { list-style: none; }
   /* ¡Yo también soy Chani!: en desktop, texto a la izquierda y Chani a la derecha, todo en una pantalla */
   .twin { padding: 50px 0; }
   .twin .container {
-    display: grid; grid-template-columns: minmax(0, 520px) auto; column-gap: 90px; justify-content: center; align-items: center; max-width: 1040px;
+    display: grid; grid-template-columns: minmax(0, 640px) auto; column-gap: 70px; justify-content: center; align-items: center; max-width: 1180px;
     grid-template-areas: ". magic" "title magic" "sub magic" "cta magic" ". magic";
     grid-template-rows: 1fr auto auto auto 1fr;
   }
-  .twin .title { grid-area: title; text-align: left; }
-  .twin .subtitle { grid-area: sub; text-align: left; margin: 14px 0 0; font-size: 20px; max-width: 460px; }
+  .twin .title { grid-area: title; text-align: left; white-space: nowrap; }
+  .twin .subtitle { grid-area: sub; text-align: left; margin: 14px 0 0; font-size: 20px; max-width: none; }
   .twin__cta { grid-area: cta; align-items: flex-start; }
   .twin__hint { text-align: left; }
   .avatars { justify-content: flex-start; }
