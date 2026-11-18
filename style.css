@@ -146,6 +146,7 @@ ol, ul { list-style: none; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 .hero__img { position: relative; width: 100%; max-width: 340px; margin-top: 20px; }
 .hero__img img { position: relative; z-index: 1; animation: bob 5s ease-in-out infinite; filter: drop-shadow(0 20px 30px rgba(230, 61, 140, .25)); }
+.hero__img picture { display: block; position: relative; z-index: 1; }
 .hero__blob {
   position: absolute; inset: 12% -6% 4% -6%;
   background: linear-gradient(135deg, var(--pink) 0%, var(--lilac) 100%);
