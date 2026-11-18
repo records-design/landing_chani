@@ -17,7 +17,7 @@ links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 }));
 
 // Aparición suave al scrollear
-const targets = document.querySelectorAll('.title, .subtitle, .song, .vcard, .prime__text, .prime__video, .about__text, .about__imgs, .platform');
+const targets = document.querySelectorAll('.title, .subtitle, .song, .vcard:not(.carousel__item), .prime__text, .prime__video, .about__text, .about__imgs, .platform');
 targets.forEach(el => el.classList.add('reveal'));
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => {
@@ -40,5 +40,22 @@ document.querySelectorAll('.yt').forEach(btn => btn.addEventListener('click', ()
   f.allowFullscreen = true;
   btn.appendChild(f);
 }));
+
+// Carrusel de cuentos con flechas
+document.querySelectorAll('[data-carousel]').forEach(c => {
+  const track = c.querySelector('.carousel__track');
+  const prev = c.querySelector('[data-dir="-1"]');
+  const next = c.querySelector('[data-dir="1"]');
+  const update = () => {
+    prev.disabled = track.scrollLeft <= 4;
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+  };
+  [prev, next].forEach(b => b.addEventListener('click', () => {
+    track.scrollBy({ left: Number(b.dataset.dir) * track.clientWidth * 0.9, behavior: 'smooth' });
+  }));
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+});
 
 document.getElementById('year').textContent = new Date().getFullYear();

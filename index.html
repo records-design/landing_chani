@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=16">
+  <link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
 
@@ -135,31 +135,61 @@
       <div class="container">
         <h2 class="title">Los cuentos <span>de Chani</span></h2>
         <p class="subtitle">¡Hola, Chulitos! Bienvenidos a mi rincón de cuentos, magia y aventuras.</p>
-        <div class="videos__grid">
-          <figure class="vcard">
-            <span class="vcard__new">¡Nuevo!</span><button class="yt" data-id="JpXklfQJtdo" aria-label="Reproducir el cuento: El Mago de Oz"><img src="https://i.ytimg.com/vi/JpXklfQJtdo/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
-            <figcaption>El Mago de Oz</figcaption>
-          </figure>
-          <figure class="vcard">
-            <button class="yt" data-id="0Kfx-YZbfME" aria-label="Reproducir el cuento: Caperucita Roja"><img src="https://i.ytimg.com/vi/0Kfx-YZbfME/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
-            <figcaption>Caperucita Roja</figcaption>
-          </figure>
-          <figure class="vcard">
-            <button class="yt" data-id="7FOVyebyDrQ" aria-label="Reproducir el cuento: Cenicienta"><img src="https://i.ytimg.com/vi/7FOVyebyDrQ/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
-            <figcaption>Cenicienta</figcaption>
-          </figure>
-          <figure class="vcard">
-            <button class="yt" data-id="wQJ4iyhZe0c" aria-label="Reproducir el cuento: La bella y la bestia"><img src="https://i.ytimg.com/vi/wQJ4iyhZe0c/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
-            <figcaption>La bella y la bestia</figcaption>
-          </figure>
-          <figure class="vcard">
-            <button class="yt" data-id="z-mLy3u9j5E" aria-label="Reproducir el cuento: Pinocho"><img src="https://i.ytimg.com/vi/z-mLy3u9j5E/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
-            <figcaption>Pinocho</figcaption>
-          </figure>
-          <figure class="vcard">
-            <button class="yt" data-id="3z8yO5MOOAk" aria-label="Reproducir el cuento: La Sirenita"><img src="https://i.ytimg.com/vi/3z8yO5MOOAk/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
-            <figcaption>La Sirenita</figcaption>
-          </figure>
+        <div class="stories__featured">
+            <figure class="vcard">
+              <span class="vcard__new">¡Nuevo!</span><button class="yt" data-id="JpXklfQJtdo" aria-label="Reproducir el cuento: El Mago de Oz"><img src="https://i.ytimg.com/vi/JpXklfQJtdo/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>El Mago de Oz</figcaption>
+            </figure>
+            <figure class="vcard">
+              <button class="yt" data-id="3z8yO5MOOAk" aria-label="Reproducir el cuento: La Sirenita"><img src="https://i.ytimg.com/vi/3z8yO5MOOAk/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>La Sirenita</figcaption>
+            </figure>
+        </div>
+        <div class="carousel" data-carousel>
+          <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Cuentos anteriores" data-dir="-1">‹</button>
+          <div class="carousel__track" tabindex="0" aria-label="Más cuentos de Chani">
+            <figure class="vcard carousel__item">
+              <button class="yt" data-id="0Kfx-YZbfME" aria-label="Reproducir el cuento: Caperucita Roja"><img src="https://i.ytimg.com/vi/0Kfx-YZbfME/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>Caperucita Roja</figcaption>
+            </figure>
+            <figure class="vcard carousel__item">
+              <button class="yt" data-id="7FOVyebyDrQ" aria-label="Reproducir el cuento: Cenicienta"><img src="https://i.ytimg.com/vi/7FOVyebyDrQ/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>Cenicienta</figcaption>
+            </figure>
+            <figure class="vcard carousel__item">
+              <button class="yt" data-id="wQJ4iyhZe0c" aria-label="Reproducir el cuento: La bella y la bestia"><img src="https://i.ytimg.com/vi/wQJ4iyhZe0c/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>La bella y la bestia</figcaption>
+            </figure>
+            <figure class="vcard carousel__item">
+              <button class="yt" data-id="z-mLy3u9j5E" aria-label="Reproducir el cuento: Pinocho"><img src="https://i.ytimg.com/vi/z-mLy3u9j5E/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>Pinocho</figcaption>
+            </figure>
+            <figure class="vcard carousel__item">
+              <button class="yt" data-id="9c00uDPKnnk" aria-label="Reproducir el cuento: Blancanieves"><img src="https://i.ytimg.com/vi/9c00uDPKnnk/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>Blancanieves</figcaption>
+            </figure>
+            <figure class="vcard carousel__item">
+              <button class="yt" data-id="z674rARt_Ew" aria-label="Reproducir el cuento: La Bella Durmiente"><img src="https://i.ytimg.com/vi/z674rARt_Ew/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>La Bella Durmiente</figcaption>
+            </figure>
+            <figure class="vcard carousel__item">
+              <button class="yt" data-id="AiYAowX4hUM" aria-label="Reproducir el cuento: El Gato con Botas"><img src="https://i.ytimg.com/vi/AiYAowX4hUM/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>El Gato con Botas</figcaption>
+            </figure>
+            <figure class="vcard carousel__item">
+              <button class="yt" data-id="gAKg7TLYMX8" aria-label="Reproducir el cuento: Los 3 chanchitos"><img src="https://i.ytimg.com/vi/gAKg7TLYMX8/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>Los 3 chanchitos</figcaption>
+            </figure>
+            <figure class="vcard carousel__item">
+              <button class="yt" data-id="JfwuJh1Dep4" aria-label="Reproducir el cuento: El Patito Feo"><img src="https://i.ytimg.com/vi/JfwuJh1Dep4/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>El Patito Feo</figcaption>
+            </figure>
+            <figure class="vcard carousel__item">
+              <button class="yt" data-id="25dr3vo6TAE" aria-label="Reproducir el cuento: La Ratita Presumida"><img src="https://i.ytimg.com/vi/25dr3vo6TAE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
+              <figcaption>La Ratita Presumida</figcaption>
+            </figure>
+          </div>
+          <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Más cuentos" data-dir="1">›</button>
         </div>
         <div class="center">
           <a href="https://www.youtube.com/playlist?list=PLTrBJxJSs6ivGqA5cMCx1mUL9KCaz-MyJ" target="_blank" rel="noopener" class="btn">Ver todos los cuentos</a>
@@ -237,6 +267,6 @@
     <p>Creado por Onceloops Media y Babidibu Records · © <span id="year">2026</span></p>
   </footer>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>
