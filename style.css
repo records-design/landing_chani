@@ -246,7 +246,6 @@ ol, ul { list-style: none; }
 .badge--prime { background: #00a8e1; color: var(--white); box-shadow: 0 4px 0 #0080ad; }
 .btn--prime { background: #00a8e1; box-shadow: 0 6px 0 #0080ad; }
 .btn--prime:hover { box-shadow: 0 9px 0 #0080ad; }
-.link { display: inline-block; margin-top: 20px; font-weight: 600; color: var(--pink-dark); border-bottom: 2px dashed var(--pink); }
 
 /* Reproductor YouTube liviano */
 .yt {
