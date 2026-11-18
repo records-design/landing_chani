@@ -476,7 +476,7 @@ ol, ul { list-style: none; }
 @media (min-width: 768px) {
   .container { padding: 0 32px; }
   .twin__clues li { font-size: 17px; padding: 10px 20px; }
-  .magic__stage { --w: 300px; }
+  .magic__stage { --w: min(300px, calc((100vh - 260px) / 2.4)); }
   .magic__bubble { font-size: 17px; max-width: 170px; left: 66%; }
   .stories__featured { gap: 28px; }
   .stories__featured figcaption { font-size: 18px; }
@@ -542,6 +542,18 @@ ol, ul { list-style: none; }
   .about__text { flex: 1; }
   .about__imgs { flex: 0 0 52%; }
   .platforms { grid-template-columns: repeat(5, 1fr); max-width: 1000px; }
+  /* ¡Yo también soy Chani!: en desktop, texto a la izquierda y Chani a la derecha, todo en una pantalla */
+  .twin { padding: 50px 0; }
+  .twin .container {
+    display: grid; grid-template-columns: 1fr auto; column-gap: 70px; align-items: center; max-width: 1040px;
+    grid-template-areas: ". magic" "title magic" "sub magic" "clues magic" ". magic";
+    grid-template-rows: 1fr auto auto auto 1fr;
+  }
+  .twin .title { grid-area: title; text-align: left; }
+  .twin .subtitle { grid-area: sub; text-align: left; margin: 14px 0 0; font-size: 20px; max-width: 460px; }
+  .twin__clues { grid-area: clues; justify-content: flex-start; margin-top: 26px; }
+  .twin .magic { grid-area: magic; }
+  .magic__stage { --w: min(280px, calc((100vh - 200px) / 2.4)); }
   .carousel__item { flex-basis: calc((100% - 48px) / 4); }
   .carousel__arrow--prev { left: -28px; }
   .carousel__arrow--next { right: -28px; }
