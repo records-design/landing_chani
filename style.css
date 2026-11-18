@@ -283,7 +283,10 @@ ol, ul { list-style: none; }
 
 /* Footer */
 .footer { position: relative; background: var(--pink); color: var(--white); text-align: center; padding: 70px 16px 40px; }
-.wave--top { top: -29px; bottom: auto; background: var(--pink); transform: rotate(180deg); }
+/* onditas celestes que cuelgan sobre el rosa del pie */
+.wave--top { top: -1px; bottom: auto; background: #C9E8FA;
+  -webkit-mask: radial-gradient(40px 30px at 40px 0, #000 98%, transparent) 0 0 / 80px 100% repeat-x;
+          mask: radial-gradient(40px 30px at 40px 0, #000 98%, transparent) 0 0 / 80px 100% repeat-x; }
 .footer p { margin-top: 14px; font-weight: 500; }
 .logo--footer .logo__name { -webkit-text-stroke-color: var(--pink-dark); text-shadow: 0 4px 0 var(--pink-dark); color: var(--white); }
 
