@@ -16,7 +16,7 @@
   --white: #ffffff;
   --radius: 28px;
   --shadow: 0 10px 0 rgba(230, 61, 140, .18), 0 20px 40px rgba(230, 61, 140, .15);
-  --font: 'Fredoka', system-ui, sans-serif;
+  --font: 'Nunito', system-ui, sans-serif;
   --script: 'Pacifico', cursive;
 }
 
@@ -72,7 +72,7 @@ ol, ul { list-style: none; }
 /* ---------- BOTONES ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  font-family: var(--font); font-weight: 700; font-size: 18px;
+  font-family: var(--font); font-weight: 800; font-size: 18px;
   padding: 14px 28px; border-radius: 999px;
   background: var(--pink); color: var(--white);
   box-shadow: 0 6px 0 var(--pink-dark);
@@ -170,7 +170,7 @@ ol, ul { list-style: none; }
 
 /* ---------- SECCIONES ---------- */
 .section { padding: 70px 0; position: relative; }
-.title { font-weight: 700; font-size: 36px; line-height: 1.1; text-align: center; color: var(--ink); }
+.title { font-weight: 900; font-size: 36px; line-height: 1.1; text-align: center; color: var(--ink); }
 .title span { font-family: var(--script); font-weight: 400; color: var(--pink); display: inline-block; transform: rotate(-3deg); }
 .title--left { text-align: center; }
 .subtitle { text-align: center; font-size: 18px; margin: 10px auto 34px; max-width: 520px; }
