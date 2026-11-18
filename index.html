@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=52">
+  <link rel="stylesheet" href="style.css?v=42">
 </head>
 <body>
 
@@ -36,7 +36,7 @@
       <a href="#chani"> Soy Chani</a>
       <a href="#animada">Sorpresa</a>
       <a href="#prime">Mi show</a>
-      <a href="#videos">Mis videos</a>
+      <a href="#videos">Mis videoclips</a>
       <a href="#cuentos">Mis cuentos</a>
       <a href="#canciones">Mi música</a>
       <a href="#escuchar" class="btn btn--small">¡Seguime!</a>
@@ -87,14 +87,8 @@
           </ul>
         </div>
         <div class="about__imgs">
-          <picture class="about__card about__card--heart">
-            <source srcset="imagenes/chani-hero.webp" type="image/webp">
-            <img src="imagenes/chani-hero.png" alt="Chani tirando un beso con un corazón" loading="lazy" width="562" height="1000">
-          </picture>
-          <picture class="about__card about__card--edit">
-            <source srcset="imagenes/chani-edit.webp" type="image/webp">
-            <img src="imagenes/chani-edit.png" alt="Chani sonriendo con las manos en la cintura" loading="lazy" width="593" height="1100">
-          </picture>
+          <img class="about__a" src="imagenes/chani-show.jpg" alt="Chani con vestuario rojo y celeste" loading="lazy" width="800" height="533">
+          <img class="about__b" src="imagenes/chani-alfombra.jpg" alt="Chani y su versión animada sobre una alfombra rosa" loading="lazy" width="1200" height="675">
         </div>
       </div>
     </section>
@@ -112,10 +106,10 @@
                 <span class="magic__face magic__face--toon is-active" data-say="¡Hola! Soy Chani animada">
                   <img src="imagenes/chani-animada.webp" alt="Chani animada" width="300" height="900">
                 </span>
-                <span class="magic__face magic__face--sirena" data-say="¡Ahora soy Chani Sirenita!" data-video="3z8yO5MOOAk" data-title="La Sirenita" data-watch="▶ Mirá el cuento La Sirenita">
+                <span class="magic__face magic__face--sirena" data-say="¡Ahora soy Chani Sirenita!" data-video="3z8yO5MOOAk" data-title="La Sirenita">
                   <img src="imagenes/chani-sirenita.webp" alt="Chani animada vestida de sirenita" width="800" height="800" loading="lazy">
                 </span>
-                <span class="magic__face magic__face--dorothy" data-say="¡Y ahora soy Chani Dorothy!" data-video="JpXklfQJtdo" data-title="El Mago de Oz" data-watch="▶ Mirá El Mago de Oz">
+                <span class="magic__face magic__face--dorothy" data-say="¡Y ahora soy Chani Dorothy!" data-video="JpXklfQJtdo" data-title="El Mago de Oz">
                   <img src="imagenes/chani-dorothy.webp" alt="Chani animada vestida de Dorothy" width="383" height="700" loading="lazy">
                 </span>
               </span>
@@ -132,7 +126,9 @@
             <button class="avatar avatar--sirena" type="button" data-face="1" aria-pressed="false"><span class="avatar__pic"><img src="imagenes/chani-sirenita.webp" alt="" loading="lazy"></span><span class="avatar__name">Sirenita</span></button>
             <button class="avatar avatar--dorothy" type="button" data-face="2" aria-pressed="false"><span class="avatar__pic"><img src="imagenes/chani-dorothy.webp" alt="" loading="lazy"></span><span class="avatar__name">Dorothy</span></button>
           </div>
-          <button class="btn btn--small twin__watch" type="button" id="watchTale" hidden>▶ Mirá el cuento</button>
+          <button class="btn btn--small twin__watch" type="button" id="watchTale" hidden>▶ Mirá el cuent
+
+          </button>
         </div>
       </div>
     </section>
@@ -316,6 +312,6 @@
     <p>Creado por Onceloops Media y Babidibu Records · © <span id="year">2026</span></p>
   </footer>
 
-  <script src="script.js?v=22"></script>
+  <script src="script.js?v=19"></script>
 </body>
 </html>
