@@ -22,6 +22,7 @@
   --sticker: 0 0 0 6px var(--white), 0 12px 0 6px rgba(217, 79, 146, .14), 0 22px 40px rgba(143, 82, 172, .18);
   /* Textura: azulejos rosas con corazoncitos, como en los escenarios del manual */
   --tile-hearts: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cpath d='M22 27c-2-3-7-3-7 1 0 3 4 5 7 8 3-3 7-5 7-8 0-4-5-4-7-1z' fill='%23F46FAE' fill-opacity='.45'/%3E%3Cpath d='M66 71c-2-3-7-3-7 1 0 3 4 5 7 8 3-3 7-5 7-8 0-4-5-4-7-1z' fill='%23F46FAE' fill-opacity='.3'/%3E%3C/svg%3E");
+  --tile-hearts-sparse: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg id='a'%3E%3Cpath d='M22 27c-2-3-7-3-7 1 0 3 4 5 7 8 3-3 7-5 7-8 0-4-5-4-7-1z' fill='%23F46FAE' fill-opacity='.45'/%3E%3Cpath d='M66 71c-2-3-7-3-7 1 0 3 4 5 7 8 3-3 7-5 7-8 0-4-5-4-7-1z' fill='%23F46FAE' fill-opacity='.3'/%3E%3C/g%3E%3Cuse href='%23a' transform='translate(100 100)'/%3E%3C/svg%3E");
   --tile-grid: linear-gradient(rgba(244, 111, 174, .16) 2px, transparent 2px), linear-gradient(90deg, rgba(244, 111, 174, .16) 2px, transparent 2px);
   --font: 'Fredoka', system-ui, sans-serif;
   --script: 'Pacifico', cursive;
@@ -197,15 +198,15 @@ ol, ul { list-style: none; }
 /* ---------- SECCIONES ---------- */
 /* Fondos con color y textura, en la línea del hero */
 :root {
-  --pat-stars: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cpath d='M24 14l2.4 6.6L33 23l-6.6 2.4L24 32l-2.4-6.6L15 23l6.6-2.4z' fill='%23fff' fill-opacity='.75'/%3E%3Cpath d='M72 62l1.6 4.4L78 68l-4.4 1.6L72 74l-1.6-4.4L66 68l4.4-1.6z' fill='%23fff' fill-opacity='.6'/%3E%3Ccircle cx='76' cy='22' r='2.5' fill='%23fff' fill-opacity='.6'/%3E%3Ccircle cx='22' cy='74' r='2' fill='%23fff' fill-opacity='.5'/%3E%3C/svg%3E");
-  --pat-notes: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110' viewBox='0 0 110 110'%3E%3Cg fill='%23F46FAE' fill-opacity='.28'%3E%3Cpath d='M30 18v20.5a6 6 0 1 0 3 5.2V26h9v-8z'/%3E%3Cpath d='M78 66v18.5a6 6 0 1 0 3 5.2V72h9v-6z'/%3E%3C/g%3E%3Cpath d='M86 24c-1.6-2.4-5.6-2.4-5.6.8 0 2.4 3.2 4 5.6 6.4 2.4-2.4 5.6-4 5.6-6.4 0-3.2-4-3.2-5.6-.8z' fill='%23fff' fill-opacity='.8'/%3E%3C/svg%3E");
+  --pat-stars: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg id='a'%3E%3Cpath d='M24 14l2.4 6.6L33 23l-6.6 2.4L24 32l-2.4-6.6L15 23l6.6-2.4z' fill='%23fff' fill-opacity='.75'/%3E%3Cpath d='M72 62l1.6 4.4L78 68l-4.4 1.6L72 74l-1.6-4.4L66 68l4.4-1.6z' fill='%23fff' fill-opacity='.6'/%3E%3Ccircle cx='76' cy='22' r='2.5' fill='%23fff' fill-opacity='.6'/%3E%3Ccircle cx='22' cy='74' r='2' fill='%23fff' fill-opacity='.5'/%3E%3C/g%3E%3Cuse href='%23a' transform='translate(110 110)'/%3E%3C/svg%3E");
+  --pat-notes: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg id='a'%3E%3Cg fill='%23F46FAE' fill-opacity='.28'%3E%3Cpath d='M30 18v20.5a6 6 0 1 0 3 5.2V26h9v-8z'/%3E%3Cpath d='M78 66v18.5a6 6 0 1 0 3 5.2V72h9v-6z'/%3E%3C/g%3E%3Cpath d='M86 24c-1.6-2.4-5.6-2.4-5.6.8 0 2.4 3.2 4 5.6 6.4 2.4-2.4 5.6-4 5.6-6.4 0-3.2-4-3.2-5.6-.8z' fill='%23fff' fill-opacity='.8'/%3E%3C/g%3E%3Cuse href='%23a' transform='translate(120 120)'/%3E%3C/svg%3E");
 }
-.prime { background-color: #C9E8FA; background-image: var(--pat-stars); background-size: 96px 96px; }
-.videos { background-color: #FFD3E7; background-image: var(--tile-hearts), var(--tile-grid); background-size: 88px 88px, 44px 44px, 44px 44px; }
-.stories { background-color: #E5CFF6; background-image: var(--pat-stars); background-size: 96px 96px; }
-.songs { background-color: #FFE9A8; background-image: var(--pat-notes); background-size: 110px 110px; }
-.about { background-color: #FFE9A8; background-image: var(--tile-hearts); background-size: 88px 88px; }
-.listen { background-color: #C9E8FA; background-image: var(--pat-stars); background-size: 96px 96px; }
+.prime { background-color: #C9E8FA; background-image: var(--pat-stars); background-size: 220px 220px; }
+.videos { background-color: #FFD3E7; background-image: var(--tile-hearts-sparse); background-size: 200px 200px; }
+.stories { background-color: #E5CFF6; background-image: var(--pat-stars); background-size: 220px 220px; }
+.songs { background-color: #FFE9A8; background-image: var(--pat-notes); background-size: 240px 240px; }
+.about { background-color: #FFE9A8; background-image: var(--tile-hearts-sparse); background-size: 200px 200px; }
+.listen { background-color: #C9E8FA; background-image: var(--pat-stars); background-size: 220px 220px; }
 
 .section { padding: 70px 0; position: relative; }
 .title { font-weight: 700; font-size: 36px; line-height: 1.1; text-align: center; color: var(--ink); }
@@ -215,6 +216,8 @@ ol, ul { list-style: none; }
 
 /* Canciones */
 .songs__grid { display: grid; grid-template-columns: 1fr; gap: 12px; counter-reset: s; }
+.songs__grid li { display: flex; }
+.songs__grid .song { flex: 1; min-height: 84px; }
 .songs__grid li { counter-increment: s; }
 .song {
   display: flex; align-items: center; gap: 14px;
@@ -352,7 +355,7 @@ ol, ul { list-style: none; }
 .carousel__arrow--next { right: -6px; }
 
 /* Chani animada */
-.twin { background-color: #FFD3E7; background-image: var(--pat-stars); background-size: 96px 96px; }
+.twin { background-color: #FFD3E7; background-image: var(--pat-stars); background-size: 220px 220px; }
 .magic { display: flex; flex-direction: column; align-items: center; gap: 18px; }
 .magic__stage { --w: min(280px, 64vw); position: relative; width: var(--w); padding-bottom: calc(var(--w) * .35); margin-top: 10px; }
 /* podium rosa: Chani queda parada arriba */
@@ -557,7 +560,7 @@ ol, ul { list-style: none; }
   .logo--big .logo__name { font-size: 110px; }
   .title { font-size: 46px; }
   .section { padding: 90px 0; }
-  .songs__grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .songs__grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 16px; }
   .title--left { text-align: left; }
   .about__text p { text-align: left; }
   .about__imgs { max-width: 620px; margin: 0 auto; width: 100%; }
