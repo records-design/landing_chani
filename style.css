@@ -616,8 +616,11 @@ ol, ul { list-style: none; }
   .twin .title { grid-area: title; text-align: left; white-space: nowrap; }
   .twin .subtitle { grid-area: sub; text-align: left; margin: 30px 0 0; font-size: 20px; max-width: none; }
   .twin__cta { grid-area: cta; align-items: flex-start; margin-top: 56px; gap: 26px; }
-  .twin__hint { text-align: left; }
-  .avatars { justify-content: flex-start; }
+  .twin__hint { text-align: left; font-size: 26px; }
+  .avatars { justify-content: flex-start; gap: 30px; }
+  .twin .avatar { gap: 10px; }
+  .twin .avatar__pic { width: 116px; height: 116px; }
+  .twin .avatar__name { font-size: 19px; }
       .twin .magic { grid-area: magic; }
   .magic__stage { --w: min(280px, calc((100vh - 200px) / 2.4)); }
   .carousel__item { flex-basis: calc((100% - 48px) / 4); }
