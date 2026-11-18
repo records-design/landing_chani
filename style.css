@@ -346,16 +346,12 @@ ol, ul { list-style: none; }
 /* Chani animada */
 .twin { background-color: #FFD3E7; background-image: var(--pat-stars); background-size: 96px 96px; }
 .magic { display: flex; flex-direction: column; align-items: center; gap: 18px; }
-.magic__stage { position: relative; width: min(280px, 72vw); padding-bottom: 38px; margin-top: 10px; }
-/* alfombra redonda y mullida, con costura (recurso del manual: volúmenes suaves y formas redondeadas) */
-.magic__rug {
-  position: absolute; left: -22%; right: -22%; bottom: 0; height: 84px; border-radius: 50%; z-index: 0;
-  background:
-    radial-gradient(circle, rgba(255, 255, 255, .22) 1.4px, transparent 1.8px) 0 0 / 9px 9px,
-    radial-gradient(ellipse at 50% 35%, #FFA6CF 0%, var(--pink) 62%, #E35C9E 100%);
-  box-shadow: inset 0 -8px 0 rgba(217, 79, 146, .55), inset 0 6px 10px rgba(255, 255, 255, .35), 0 18px 26px -10px rgba(143, 82, 172, .5);
+.magic__stage { --w: min(280px, 64vw); position: relative; width: var(--w); padding-bottom: calc(var(--w) * .47); margin-top: 10px; }
+/* podium rosa: Chani queda parada arriba */
+.magic__podium {
+  position: absolute; left: -20%; bottom: 0; width: 140%; max-width: none; height: auto; z-index: 0;
+  filter: drop-shadow(0 16px 18px rgba(143, 82, 172, .3));
 }
-.magic__rug::after { content: ""; position: absolute; inset: 11px 16px 15px; border-radius: 50%; border: 3px dashed rgba(255, 255, 255, .75); }
 .magic__card {
   position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 1 / 2; border: 0; padding: 0; background: none; cursor: pointer;
   perspective: 1200px; font: inherit; color: inherit;
@@ -429,7 +425,7 @@ ol, ul { list-style: none; }
 @media (min-width: 768px) {
   .container { padding: 0 32px; }
   .twin__clues li { font-size: 17px; padding: 10px 20px; }
-  .magic__stage { width: 300px; }
+  .magic__stage { --w: 300px; }
   .magic__caption { font-size: 18px; }
   .stories__featured { gap: 28px; }
   .stories__featured figcaption { font-size: 18px; }
