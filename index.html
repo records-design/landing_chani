@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=35">
+  <link rel="stylesheet" href="style.css?v=36">
 </head>
 <body>
 
@@ -124,15 +124,17 @@
         </div>
         <div class="twin__stories">
           <h3>¡Mirame animada en mis cuentos!</h3>
-          <div class="twin__stories-grid">
-            <figure class="vcard">
-              <button class="yt" data-id="JpXklfQJtdo" aria-label="Reproducir el cuento: El Mago de Oz"><img src="https://i.ytimg.com/vi/JpXklfQJtdo/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
-              <figcaption>El Mago de Oz</figcaption>
-            </figure>
-            <figure class="vcard">
-              <button class="yt" data-id="3z8yO5MOOAk" aria-label="Reproducir el cuento: La Sirenita"><img src="https://i.ytimg.com/vi/3z8yO5MOOAk/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt__play" aria-hidden="true">▶</span></button>
-              <figcaption>La Sirenita</figcaption>
-            </figure>
+          <div class="tales" id="tales">
+            <!-- Para sumar un personaje: copiar un <article class="tale"> con su imagen, cuento y video -->
+            <article class="tale is-active" data-video="JpXklfQJtdo" data-title="El Mago de Oz">
+              <div class="tale__pic"><img src="imagenes/chani-dorothy.webp" alt="Chani animada vestida de Dorothy, con su canasta" width="383" height="700" loading="lazy"></div>
+              <div class="tale__info">
+                <span class="tale__tag">El Mago de Oz</span>
+                <p class="tale__name">¡Soy Chani Dorothy!</p>
+                <button class="btn btn--small tale__play" type="button">▶ Mirá el cuento</button>
+              </div>
+            </article>
+            <div class="tales__dots" aria-hidden="true"></div>
           </div>
         </div>
       </div>
@@ -304,6 +306,11 @@
     </section>
   </main>
 
+  <dialog class="video-modal" id="videoModal" aria-label="Cuento de Chani">
+    <button class="video-modal__close" type="button" aria-label="Cerrar">✕</button>
+    <div class="video-modal__frame"></div>
+  </dialog>
+
   <footer class="footer">
     <div class="wave wave--top" aria-hidden="true"></div>
     <a href="#inicio" class="logo logo--footer" aria-label="Volver al inicio">
@@ -312,6 +319,6 @@
     <p>Creado por Onceloops Media y Babidibu Records · © <span id="year">2026</span></p>
   </footer>
 
-  <script src="script.js?v=14"></script>
+  <script src="script.js?v=16"></script>
 </body>
 </html>

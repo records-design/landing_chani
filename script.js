@@ -92,4 +92,42 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
   }
 })();
 
+// Personajes de los cuentos: rotan solos y "Mirá el cuento" abre el video
+(() => {
+  const box = document.getElementById('tales');
+  const modal = document.getElementById('videoModal');
+  if (!box || !modal) return;
+  const tales = [...box.querySelectorAll('.tale')];
+  const dotsBox = box.querySelector('.tales__dots');
+  const frame = modal.querySelector('.video-modal__frame');
+  let i = 0, timer = null;
+  const show = k => {
+    tales[i].classList.remove('is-active');
+    i = (k + tales.length) % tales.length;
+    tales[i].classList.add('is-active');
+    dotsBox.querySelectorAll('button').forEach((d, n) => d.setAttribute('aria-current', n === i));
+  };
+  const start = () => { if (tales.length > 1 && !timer) timer = setInterval(() => show(i + 1), 4500); };
+  const stop = () => { clearInterval(timer); timer = null; };
+  if (tales.length > 1) {
+    tales.forEach((t, n) => {
+      const d = document.createElement('button');
+      d.type = 'button'; d.setAttribute('aria-label', 'Ver ' + t.dataset.title);
+      d.addEventListener('click', () => { stop(); show(n); start(); });
+      dotsBox.appendChild(d);
+    });
+    show(0); start();
+    box.addEventListener('mouseenter', stop); box.addEventListener('mouseleave', start);
+  }
+  const close = () => { frame.innerHTML = ''; if (modal.open) modal.close(); start(); };
+  tales.forEach(t => t.querySelector('.tale__play').addEventListener('click', () => {
+    stop();
+    frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${t.dataset.video}?autoplay=1&rel=0" title="${t.dataset.title}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+    modal.showModal();
+  }));
+  modal.querySelector('.video-modal__close').addEventListener('click', close);
+  modal.addEventListener('click', e => { if (e.target === modal) close(); });
+  modal.addEventListener('close', () => { frame.innerHTML = ''; });
+})();
+
 document.getElementById('year').textContent = new Date().getFullYear();
