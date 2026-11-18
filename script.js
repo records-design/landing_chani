@@ -70,21 +70,10 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
   const frame = modal && modal.querySelector('.video-modal__frame');
   let n = 0, busy = false;
   const sparkle = () => { card.classList.remove('is-sparkling'); void card.offsetWidth; card.classList.add('is-sparkling'); };
-  // brillitos titilantes repartidos sobre Chani
-  const box = card.querySelector('.magic__sparkles');
-  const colors = ['#FFCC53', '#F46FAE', '#56B1E2', '#FFFFFF'];
-  for (let i = 0; i < 24; i++) {
-    const g = document.createElement('i');
-    g.className = 'glint';
-    g.style.cssText = `--gx:${8 + Math.random() * 80}%;--gy:${5 + Math.random() * 80}%;--gs:${16 + Math.random() * 22}px;--gd:${(Math.random() * .6).toFixed(2)}s;--gc:${colors[i % 4]}`;
-    box.appendChild(g);
-  }
-  let gt;
-  const glitter = () => { clearTimeout(gt); card.classList.remove('is-glitter'); void card.offsetWidth; card.classList.add('is-glitter'); gt = setTimeout(() => card.classList.remove('is-glitter'), 1700); };
   const setFace = k => {
     if (busy || k === n) return; busy = true;
     card.classList.remove('is-waiting', 'is-entering', 'is-spinning'); void card.offsetWidth;
-    card.classList.add('is-spinning'); sparkle(); glitter();
+    card.classList.add('is-spinning'); sparkle();
     avatars.forEach((a, m) => a.setAttribute('aria-pressed', m === k));
     setTimeout(() => {
       faces[n].classList.remove('is-active');
@@ -118,7 +107,6 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
       io.disconnect();
       card.classList.remove('is-waiting');
       card.classList.add('is-entering');
-      glitter();
       setTimeout(() => { sparkle(); card.classList.remove('is-entering'); }, 1500);
     }, { threshold: .5 });
     io.observe(card);

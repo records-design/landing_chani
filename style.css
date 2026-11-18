@@ -367,33 +367,19 @@ ol, ul { list-style: none; }
 }
 .magic__card:hover .magic__inner { transform: rotate(-2deg); }
 /* ¡Hacé magia!: gira, y a mitad del giro cambia el personaje */
-/* al cambiar de personaje: se desvanece entre brillitos y aparece la otra Chani */
+/* al cambiar de personaje: se desvanece con estrellitas y corazones y aparece la otra Chani */
 .magic__card.is-spinning .magic__inner { animation: magicSwap .7s ease-in-out; }
 @keyframes magicSwap {
-  0%, 100% { opacity: 1; transform: none; filter: none; }
-  50% { opacity: 0; transform: scale(.94); filter: brightness(1.4); }
+  0%, 100% { opacity: 1; transform: none; }
+  50% { opacity: 0; transform: scale(.94); }
 }
-/* entrada: la Chani animada aparece por arte de magia, entre brillitos */
+/* entrada: la Chani animada aparece por arte de magia, con estrellitas y corazones */
 .magic__card.is-waiting .magic__inner { opacity: 0; }
 .magic__card.is-entering .magic__inner { animation: magicIn 1.3s ease-out both; }
 @keyframes magicIn {
-  0% { opacity: 0; transform: scale(.92); filter: brightness(1.5); }
+  0% { opacity: 0; transform: scale(.92); }
   60% { opacity: 1; }
-  100% { opacity: 1; transform: none; filter: none; }
-}
-/* brillitos: estrellas de 4 puntas que titilan sobre Chani */
-.glint {
-  position: absolute; left: var(--gx); top: var(--gy); width: var(--gs); aspect-ratio: 1; opacity: 0; pointer-events: none; z-index: 2;
-  background: radial-gradient(circle, #fff 0 18%, var(--gc) 45%);
-  clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
-  filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 8px var(--gc));
-}
-.magic__card.is-glitter .glint { animation: glint 1s ease-in-out var(--gd) both; }
-@keyframes glint {
-  0%, 100% { opacity: 0; transform: scale(0) rotate(0); }
-  40% { opacity: 1; transform: scale(1.15) rotate(45deg); }
-  60% { opacity: .8; transform: scale(.7) rotate(70deg); }
-  80% { opacity: 1; transform: scale(1) rotate(90deg); }
+  100% { opacity: 1; transform: none; }
 }
 .magic__face {
   position: absolute; inset: 0; display: flex; justify-content: center; align-items: flex-end;
