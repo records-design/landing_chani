@@ -272,6 +272,11 @@ ol, ul { list-style: none; }
 .vcard .yt { border-width: 5px; border-radius: 22px; }
 .vcard .yt__play { width: 54px; height: 54px; font-size: 20px; }
 
+/* Cuentos */
+.stories { background: linear-gradient(180deg, var(--pink-bg) 0%, var(--lilac-soft) 100%); }
+.vcard { position: relative; }
+.vcard__new { position: absolute; top: -10px; left: -8px; z-index: 3; background: var(--yellow); color: var(--ink); font-weight: 700; font-size: 14px; padding: 4px 12px; border-radius: 999px; transform: rotate(-6deg); box-shadow: 0 4px 0 #e0a92a; }
+
 /* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
