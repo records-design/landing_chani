@@ -58,23 +58,27 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
   update();
 });
 
-// Chani animada: aparece girando y con "¡Hacé magia!" se da vuelta
+// Chani animada: aparece girando y "¡Hacé magia!" la va cambiando de personaje
 (() => {
   const card = document.getElementById('magicCard');
   const btn = document.getElementById('magicBtn');
   if (!card || !btn) return;
+  const faces = [...card.querySelectorAll('.magic__face')];
+  const cap = document.getElementById('magicCaption');
+  let n = 0, busy = false;
   const sparkle = () => { card.classList.remove('is-sparkling'); void card.offsetWidth; card.classList.add('is-sparkling'); };
   const magic = () => {
-    card.classList.remove('is-waiting', 'is-entering');
-    const flipped = !card.classList.contains('is-flipped');
-    sparkle();
-    card.classList.toggle('is-flipped', flipped);
-    card.setAttribute('aria-pressed', flipped);
-    const cap = document.getElementById('magicCaption');
-    if (cap) {
-      cap.textContent = flipped ? '¡Sorpresa! Esta soy yo' : '¡Hola! Soy Chani animada';
-      cap.classList.remove('is-pop'); void cap.offsetWidth; cap.classList.add('is-pop');
-    }
+    if (busy) return; busy = true;
+    card.classList.remove('is-waiting', 'is-entering', 'is-spinning'); void card.offsetWidth;
+    card.classList.add('is-spinning'); sparkle();
+    setTimeout(() => {
+      faces[n].classList.remove('is-active');
+      n = (n + 1) % faces.length;
+      faces[n].classList.add('is-active');
+      if (cap) { cap.textContent = faces[n].dataset.say; cap.classList.remove('is-pop'); void cap.offsetWidth; cap.classList.add('is-pop'); }
+      if (faces[n].dataset.tale) document.dispatchEvent(new CustomEvent('chani:tale', { detail: Number(faces[n].dataset.tale) }));
+    }, 350);
+    setTimeout(() => { card.classList.remove('is-spinning'); busy = false; }, 720);
   };
   card.addEventListener('click', magic);
   btn.addEventListener('click', magic);
@@ -118,6 +122,7 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
     });
     show(0); start();
     box.addEventListener('mouseenter', stop); box.addEventListener('mouseleave', start);
+    document.addEventListener('chani:tale', e => { stop(); show(e.detail); start(); });
   }
   const close = () => { frame.innerHTML = ''; if (modal.open) modal.close(); start(); };
   tales.forEach(t => t.querySelector('.tale__play').addEventListener('click', () => {
