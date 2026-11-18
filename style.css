@@ -352,6 +352,8 @@ ol, ul { list-style: none; }
   position: absolute; left: -2%; bottom: 0; width: 104%; max-width: none; height: auto; z-index: 0;
   filter: drop-shadow(0 16px 18px rgba(143, 82, 172, .3));
 }
+/* copia del podium por delante, desde el centro de la tapa hacia abajo: tapa los pies y Chani queda parada adentro */
+.magic__podium--front { z-index: 2; pointer-events: none; clip-path: inset(24% 0 0 0); filter: none; }
 .magic__card {
   position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 1 / 2; border: 0; padding: 0; background: none; cursor: pointer;
   perspective: 1200px; font: inherit; color: inherit;
@@ -376,11 +378,15 @@ ol, ul { list-style: none; }
   backface-visibility: hidden; -webkit-backface-visibility: hidden;
   filter: drop-shadow(0 10px 10px rgba(143, 82, 172, .25));
 }
-.magic__face--real { transform: rotateY(180deg); }
+.magic__face--real { transform: rotateY(180deg); opacity: 0; transition: opacity 0s .3s; }
+.magic__face--toon { transition: opacity 0s .3s; }
+.magic__card.is-flipped .magic__face--real { opacity: 1; }
+.magic__card.is-flipped .magic__face--toon { opacity: 0; }
 .magic__face picture { position: absolute; inset: 0; display: flex; justify-content: center; align-items: flex-end; }
 .magic__face img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
 /* la foto real está cortada en las piernas: se funde suave con la alfombra */
-.magic__face--real img { width: 150%; max-width: none; -webkit-mask-image: linear-gradient(180deg, #000 88%, transparent 100%); mask-image: linear-gradient(180deg, #000 88%, transparent 100%); }
+.magic__face--real picture { transform: translateY(5%); }
+.magic__face--real img { width: 150%; max-width: none; }
 .magic__bubble {
   position: absolute; z-index: 3; top: 2%; left: 62%; width: max-content; max-width: 150px;
   background: var(--white); color: var(--lilac); font-weight: 700; font-size: 15px; line-height: 1.25; text-align: center;
@@ -545,7 +551,7 @@ ol, ul { list-style: none; }
   /* ¡Yo también soy Chani!: en desktop, texto a la izquierda y Chani a la derecha, todo en una pantalla */
   .twin { padding: 50px 0; }
   .twin .container {
-    display: grid; grid-template-columns: 1fr auto; column-gap: 70px; align-items: center; max-width: 1040px;
+    display: grid; grid-template-columns: minmax(0, 500px) auto; column-gap: 90px; justify-content: center; align-items: center; max-width: 1000px;
     grid-template-areas: ". magic" "title magic" "sub magic" "clues magic" ". magic";
     grid-template-rows: 1fr auto auto auto 1fr;
   }
