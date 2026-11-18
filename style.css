@@ -241,11 +241,13 @@ ol, ul { list-style: none; }
 .features li { display: flex; align-items: center; gap: 14px; background: var(--white); border-radius: 20px; padding: 14px 18px; font-size: 17px; box-shadow: 0 5px 0 var(--sky); }
 .features li span { font-size: 26px; flex: none; }
 .features strong { color: var(--pink-dark); margin-right: 4px; }
-.about__imgs { position: relative; padding-top: 36%; }
-.about__b { display: block; width: 76%; margin-left: auto; border-radius: var(--radius); border: 6px solid var(--white); box-shadow: var(--shadow); transform: rotate(3deg); }
-/* Chani recortada, parada adelante de la foto */
-.about__a { position: absolute; left: 0; bottom: -4%; width: 42%; }
-.about__a img { display: block; width: 100%; height: auto; filter: drop-shadow(0 12px 18px rgba(143, 82, 172, .35)); -webkit-mask-image: linear-gradient(#000 88%, transparent); mask-image: linear-gradient(#000 88%, transparent); }
+.about__imgs { position: relative; padding-top: 30%; }
+.about__b { display: block; width: 72%; margin-left: auto; border-radius: var(--radius); border: 6px solid var(--white); box-shadow: var(--shadow); transform: rotate(3deg); }
+/* Chani en una tarjeta 3D soft con degradé pastel */
+.about__a { position: absolute; left: 0; bottom: -6%; width: 46%; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 28px; border: 6px solid var(--white); transform: rotate(-3deg);
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.75), transparent 45%), linear-gradient(160deg, #FFD3E7 0%, #E5CFF6 45%, #C9E8FA 80%, #FFF1C9 100%);
+  box-shadow: 0 14px 30px rgba(143, 82, 172, .28), inset 0 -10px 22px rgba(143, 82, 172, .14), inset 0 8px 16px rgba(255, 255, 255, .7); }
+.about__a img { position: absolute; left: 50%; bottom: 0; height: 95%; width: auto; transform: translateX(-50%); filter: drop-shadow(0 8px 12px rgba(143, 82, 172, .3)); }
 
 
 /* Escuchar */
