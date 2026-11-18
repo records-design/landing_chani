@@ -17,7 +17,7 @@ links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 }));
 
 // Aparición suave al scrollear
-const targets = document.querySelectorAll('.title, .subtitle, .song, .vcard, .prime__text, .prime__video, .about__text, .about__imgs, .shows__card, .platform');
+const targets = document.querySelectorAll('.title, .subtitle, .song, .vcard, .prime__text, .prime__video, .about__text, .about__imgs, .platform');
 targets.forEach(el => el.classList.add('reveal'));
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => {
