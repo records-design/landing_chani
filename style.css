@@ -267,11 +267,16 @@ ol, ul { list-style: none; }
   background: linear-gradient(180deg, color-mix(in srgb, var(--c) 82%, var(--c-light)) 0%, var(--c) 55%, color-mix(in srgb, var(--c) 85%, var(--c-dark)) 100%);
   box-shadow: inset 0 2px 2px rgba(255,255,255,.22), inset 0 -3px 5px rgba(0,0,0,.12), 0 6px 12px -3px color-mix(in srgb, var(--c-dark) 60%, transparent);
 }
-.platform--yt .platform__icon { --c: var(--pink); --c-light: #FF9DCB; --c-dark: #D94F92; }
-.platform--sp .platform__icon { --c: var(--lilac); --c-light: #B27FCC; --c-dark: #6E3A8A; }
-.platform--pv .platform__icon { --c: var(--sky); --c-light: #8CD0F3; --c-dark: #3A91C2; font-size: 14px; font-weight: 700; }
-.platform--tt .platform__icon { --c: var(--lilac); --c-light: #B27FCC; --c-dark: #6E3A8A; }
-.platform--ig .platform__icon { --c: var(--yellow); --c-light: #FFE296; --c-dark: #E6A92A; }
+/* logos originales de cada red, con volumen suave */
+.platform__icon svg { width: 62%; height: auto; display: block; }
+.platform--yt .platform__icon { background: #fff; box-shadow: inset 0 -3px 6px rgba(0,0,0,.08), 0 6px 12px -3px rgba(255, 0, 0, .35); }
+.platform--yt .platform__icon svg { width: 66%; }
+.platform--sp .platform__icon { background: #fff; box-shadow: inset 0 -3px 6px rgba(0,0,0,.08), 0 6px 12px -3px rgba(30, 215, 96, .45); }
+.platform--sp .platform__icon svg { width: 100%; }
+.platform--pv .platform__icon { background: linear-gradient(180deg, #1AB7EA, #00A8E1 55%, #0090C4); }
+.platform--pv .platform__icon svg { width: 80%; }
+.platform--ig .platform__icon { background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%, #285AEB 90%); }
+.platform--tt .platform__icon { background: linear-gradient(180deg, #2a2a2a, #000); }
 
 /* Footer */
 .footer { position: relative; background: var(--pink); color: var(--white); text-align: center; padding: 70px 16px 40px; }
