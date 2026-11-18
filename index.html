@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
@@ -34,10 +34,11 @@
     </button>
     <nav class="nav__links" id="navLinks">
       <a href="#prime">El show</a>
+      <a href="#espacios">Espacios</a>
       <a href="#videos">Videos</a>
       <a href="#canciones">Canciones</a>
-      <a href="#mundial">Mundial</a>
       <a href="#chani">¿Qué es?</a>
+      <a href="#gatito">Gatito</a>
       <a href="#escuchar" class="btn btn--small">¡Escuchar!</a>
     </nav>
   </header>
@@ -97,6 +98,43 @@
             <span class="yt__play" aria-hidden="true">▶</span>
           </button>
           <p class="yt__caption">Episodio 06 · Guerra de cosquillas con Topa</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRES ESPACIOS -->
+    <section class="section spaces textured" id="espacios">
+      <div class="container">
+        <div class="spaces__panel">
+          <span class="sparkle sparkle--pink" style="top:26px;left:26px" aria-hidden="true">♥</span>
+          <span class="sparkle" style="top:30px;right:34px" aria-hidden="true">★</span>
+          <span class="kicker">El nuevo mundo de</span>
+          <h2 class="title"><span>Chani</span></h2>
+          <p class="subtitle">Tres caminos para crear, imaginar y disfrutar</p>
+          <div class="spaces__grid">
+            <article class="space space--cuentos">
+              <span class="space__icon" aria-hidden="true">📖</span>
+              <span class="space__label">Cuentos</span>
+              <div class="space__img"><img src="imagenes/espacio-biblioteca.jpg" alt="La biblioteca de Chani, con estantes de libros, almohadones y globos de corazón" loading="lazy" width="367" height="859"></div>
+              <h3>La biblioteca</h3>
+              <p>Cuentos clásicos y nuevos, en la voz más dulce para los más pequeños.</p>
+            </article>
+            <article class="space space--canciones">
+              <span class="space__icon" aria-hidden="true">🎵</span>
+              <span class="space__label">Canciones</span>
+              <div class="space__img"><img src="imagenes/espacio-estudio.jpg" alt="El estudio de grabación de Chani, rosa, con micrófono y teclado" loading="lazy" width="367" height="859"></div>
+              <h3>El estudio de grabación</h3>
+              <p>Las canciones más conocidas para cantar todos juntos.</p>
+            </article>
+            <article class="space space--manualidades">
+              <span class="space__icon" aria-hidden="true">✂️</span>
+              <span class="space__label">Manualidades</span>
+              <div class="space__img"><img src="imagenes/espacio-taller.jpg" alt="El taller de arte de Chani, con mesa, banquitos de colores y materiales" loading="lazy" width="367" height="859"></div>
+              <h3>El taller de arte</h3>
+              <p>Para imaginar, crear y darle color a cada idea.</p>
+            </article>
+          </div>
+          <p class="spaces__claim">¡Tres espacios, una sola magia!</p>
         </div>
       </div>
     </section>
@@ -205,6 +243,26 @@
       </div>
     </section>
 
+    <!-- GATITO -->
+    <section class="section kitty" id="gatito">
+      <div class="container">
+        <span class="kicker">Nuestro elemento distintivo</span>
+        <h2 class="title">¡Chani adopta <span>un gatito!</span></h2>
+        <div class="kitty__inner" style="margin-top:50px">
+          <div class="kitty__img">
+            <p class="kitty__bubble">En este nuevo mundo, Chani adopta un gatito… ♡</p>
+            <img src="imagenes/gatito.jpg" alt="Gatito blanco de ojos celestes con moño, en una camita rosa con juguetes" loading="lazy" width="1000" height="968">
+          </div>
+          <div class="kitty__card">
+            <h3>La mascota de Chani</h3>
+            <p>Chani va a elegir el nombre del gatito junto a los Chanitos.</p>
+            <span class="kitty__cta">¡Vamos a elegir su nombre juntos!</span>
+            <a href="https://www.instagram.com/elmundodechani/" target="_blank" rel="noopener" class="btn">Proponé un nombre en Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SHOWS -->
     <section class="section shows" id="shows">
       <div class="container shows__card">
@@ -240,6 +298,6 @@
     <p>Creado por Onceloops Media y Babidibu Records · © <span id="year">2026</span></p>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
