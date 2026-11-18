@@ -381,10 +381,23 @@ ol, ul { list-style: none; }
 .magic__face img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
 /* la foto real está cortada en las piernas: se funde suave con la alfombra */
 .magic__face--real img { width: 150%; max-width: none; -webkit-mask-image: linear-gradient(180deg, #000 88%, transparent 100%); mask-image: linear-gradient(180deg, #000 88%, transparent 100%); }
-.magic__caption {
-  background: var(--white); color: var(--lilac); font-weight: 700; font-size: 16px;
-  padding: 7px 18px; border-radius: 999px; box-shadow: 0 5px 0 rgba(143, 82, 172, .18);
+.magic__bubble {
+  position: absolute; z-index: 3; top: 2%; left: 62%; width: max-content; max-width: 150px;
+  background: var(--white); color: var(--lilac); font-weight: 700; font-size: 15px; line-height: 1.25; text-align: center;
+  padding: 10px 14px; border-radius: 22px;
+  box-shadow: 0 6px 0 rgba(143, 82, 172, .16), 0 12px 22px -8px rgba(143, 82, 172, .35);
+  transform-origin: 0% 100%; animation: bubbleIn .5s cubic-bezier(.3, 1.6, .5, 1) both;
 }
+/* colita del globo apuntando a Chani */
+.magic__bubble::after {
+  content: ""; position: absolute; left: 14px; bottom: -10px; width: 22px; height: 18px; background: var(--white);
+  clip-path: polygon(0 0, 100% 0, 10% 100%);
+}
+.magic__bubble.is-pop { animation: bubblePop .5s cubic-bezier(.3, 1.6, .5, 1) both; }
+/* mientras Chani gira para entrar, el globo espera */
+.magic__card.is-waiting ~ .magic__bubble, .magic__card.is-entering ~ .magic__bubble { opacity: 0; animation: none; }
+@keyframes bubbleIn { 0% { transform: scale(.3); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes bubblePop { 0% { transform: scale(.3); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
 .magic__sparkles { position: absolute; inset: 0; pointer-events: none; }
 .magic__sparkles span { position: absolute; top: 50%; left: 50%; font-size: 28px; opacity: 0; color: var(--yellow); }
 .magic__sparkles span:nth-child(3n+2) { color: var(--pink); }
@@ -426,7 +439,7 @@ ol, ul { list-style: none; }
   .container { padding: 0 32px; }
   .twin__clues li { font-size: 17px; padding: 10px 20px; }
   .magic__stage { --w: 300px; }
-  .magic__caption { font-size: 18px; }
+  .magic__bubble { font-size: 17px; max-width: 170px; left: 66%; }
   .stories__featured { gap: 28px; }
   .stories__featured figcaption { font-size: 18px; }
   .stories__featured .yt { border-width: 5px; border-radius: 22px; }

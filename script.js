@@ -71,7 +71,10 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
     card.classList.toggle('is-flipped', flipped);
     card.setAttribute('aria-pressed', flipped);
     const cap = document.getElementById('magicCaption');
-    if (cap) cap.textContent = flipped ? '¡Sorpresa! Esta soy yo' : '¡Hola! Soy Chani animada';
+    if (cap) {
+      cap.textContent = flipped ? '¡Sorpresa! Esta soy yo' : '¡Hola! Soy Chani animada';
+      cap.classList.remove('is-pop'); void cap.offsetWidth; cap.classList.add('is-pop');
+    }
   };
   card.addEventListener('click', magic);
   btn.addEventListener('click', magic);
