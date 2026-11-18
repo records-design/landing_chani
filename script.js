@@ -68,7 +68,7 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
     card.classList.remove('is-sparkling'); void card.offsetWidth; card.classList.add('is-sparkling');
     card.classList.toggle('is-toon', toon);
     card.setAttribute('aria-pressed', toon);
-    card.setAttribute('aria-label', toon ? 'Tocá para volver a ver a Chani de verdad' : 'Tocá para transformar a Chani en dibujito');
+    card.setAttribute('aria-label', toon ? 'Tocá para volver a ver a Chani de verdad' : 'Tocá para ver una sorpresa');
     btn.textContent = toon ? '✨ ¡Volver a ser yo!' : '✨ ¡Hacé magia!';
   };
   card.addEventListener('click', magic);
