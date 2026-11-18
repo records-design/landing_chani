@@ -367,8 +367,13 @@ ol, ul { list-style: none; }
 }
 .magic__card:hover .magic__inner { transform: rotate(-2deg); }
 /* ¡Hacé magia!: gira, y a mitad del giro cambia el personaje */
-.magic__card.is-spinning .magic__inner { animation: magicSpin .7s ease-in-out; }
-@keyframes magicSpin { 0% { transform: rotateY(0) scale(1); } 50% { transform: rotateY(90deg) scale(.85); } 100% { transform: rotateY(0) scale(1); } }
+/* al cambiar de personaje: se desvanece en un destello y aparece la otra Chani */
+.magic__card.is-spinning .magic__inner { animation: magicSwap .7s ease-in-out; }
+@keyframes magicSwap {
+  0%, 100% { opacity: 1; transform: none; filter: none; }
+  50% { opacity: 0; transform: scale(.9) translateY(4%); filter: brightness(2.4) blur(8px); }
+}
+.magic__card.is-spinning .magic__sparkles::before { animation: glowIn .8s ease-out both; }
 /* entrada: la Chani animada aparece por arte de magia, entre destellos */
 .magic__card.is-waiting .magic__inner { opacity: 0; }
 .magic__card.is-entering .magic__inner { animation: magicIn 1.5s ease-out both; }
