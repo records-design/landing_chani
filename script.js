@@ -58,21 +58,33 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
   update();
 });
 
-// Chani animada: ¡hacé magia! (da vuelta la tarjeta)
+// Chani animada: aparece girando y con "¡Hacé magia!" se da vuelta
 (() => {
   const card = document.getElementById('magicCard');
   const btn = document.getElementById('magicBtn');
   if (!card || !btn) return;
+  const sparkle = () => { card.classList.remove('is-sparkling'); void card.offsetWidth; card.classList.add('is-sparkling'); };
   const magic = () => {
-    const toon = !card.classList.contains('is-toon');
-    card.classList.remove('is-sparkling'); void card.offsetWidth; card.classList.add('is-sparkling');
-    card.classList.toggle('is-toon', toon);
-    card.setAttribute('aria-pressed', toon);
-    card.setAttribute('aria-label', toon ? 'Tocá para volver a ver a Chani de verdad' : 'Tocá para ver una sorpresa');
-    btn.textContent = toon ? '✨ ¡Volver a ser yo!' : '✨ ¡Hacé magia!';
+    card.classList.remove('is-waiting', 'is-entering');
+    const flipped = !card.classList.contains('is-flipped');
+    sparkle();
+    card.classList.toggle('is-flipped', flipped);
+    card.setAttribute('aria-pressed', flipped);
   };
   card.addEventListener('click', magic);
   btn.addEventListener('click', magic);
+  // entrada girando la primera vez que se ve
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    card.classList.add('is-waiting');
+    const io = new IntersectionObserver(es => {
+      if (!es[0].isIntersecting) return;
+      io.disconnect();
+      card.classList.remove('is-waiting');
+      card.classList.add('is-entering');
+      setTimeout(() => { sparkle(); card.classList.remove('is-entering'); }, 1500);
+    }, { threshold: .5 });
+    io.observe(card);
+  }
 })();
 
 document.getElementById('year').textContent = new Date().getFullYear();

@@ -354,15 +354,24 @@ ol, ul { list-style: none; }
   position: absolute; inset: 0; display: block; transform-style: preserve-3d;
   transition: transform .8s cubic-bezier(.3, 1.4, .5, 1);
 }
-.magic__card.is-toon .magic__inner { transform: rotateY(180deg); }
+.magic__card.is-flipped .magic__inner { transform: rotateY(180deg); }
 .magic__card:hover .magic__inner { transform: rotate(-2deg); }
-.magic__card.is-toon:hover .magic__inner { transform: rotateY(180deg) rotate(2deg); }
+.magic__card.is-flipped:hover .magic__inner { transform: rotateY(180deg) rotate(2deg); }
+/* entrada: la Chani animada aparece girando */
+.magic__card.is-waiting .magic__inner { opacity: 0; transform: scale(.4) rotateY(-540deg); }
+.magic__card.is-entering .magic__inner { animation: spinIn 1.5s cubic-bezier(.2, .9, .3, 1.1) both; }
+@keyframes spinIn {
+  0% { opacity: 0; transform: scale(.4) rotateY(-720deg); }
+  25% { opacity: 1; }
+  100% { opacity: 1; transform: scale(1) rotateY(0deg); }
+}
 .magic__face {
   position: absolute; inset: 0; display: flex; justify-content: center; align-items: flex-end;
   border-radius: 30px; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden;
   background: #FFF4FA; box-shadow: var(--sticker);
 }
-.magic__face--toon { transform: rotateY(180deg); background: #FBF8F9; }
+.magic__face--toon { background: #FBF8F9; }
+.magic__face--real { transform: rotateY(180deg); }
 .magic__face picture { position: absolute; inset: 4% 0 0 0; display: flex; justify-content: center; align-items: flex-end; }
 .magic__face img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
 .magic__face--toon img { position: absolute; inset: 4% 0 0 0; height: 96%; }
