@@ -79,6 +79,7 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
       faces[n].classList.remove('is-active');
       n = k;
       faces[n].classList.add('is-active');
+      card.parentElement.dataset.who = (faces[n].className.match(/magic__face--(\w+)/) || [])[1] || '';
       if (cap) { cap.textContent = faces[n].dataset.say; cap.classList.remove('is-pop'); void cap.offsetWidth; cap.classList.add('is-pop'); }
       if (watch) watch.hidden = !faces[n].dataset.video;
     }, 350);
