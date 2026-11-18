@@ -70,6 +70,8 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
     sparkle();
     card.classList.toggle('is-flipped', flipped);
     card.setAttribute('aria-pressed', flipped);
+    const cap = document.getElementById('magicCaption');
+    if (cap) cap.textContent = flipped ? '¡Sorpresa! Esta soy yo' : '¡Hola! Soy Chani animada';
   };
   card.addEventListener('click', magic);
   btn.addEventListener('click', magic);
