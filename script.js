@@ -92,7 +92,7 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
       faces[n].classList.add('is-active');
       card.parentElement.dataset.who = (faces[n].className.match(/magic__face--(\w+)/) || [])[1] || '';
       if (cap) { cap.textContent = faces[n].dataset.say; cap.classList.remove('is-pop'); void cap.offsetWidth; cap.classList.add('is-pop'); }
-      if (watch) watch.hidden = !faces[n].dataset.video;
+      if (watch) { watch.hidden = !faces[n].dataset.video; if (faces[n].dataset.watch) watch.textContent = faces[n].dataset.watch; }
     }, 350);
     setTimeout(() => { card.classList.remove('is-spinning'); busy = false; }, 720);
   };
