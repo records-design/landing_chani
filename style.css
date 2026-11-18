@@ -346,10 +346,10 @@ ol, ul { list-style: none; }
 /* Chani animada */
 .twin { background-color: #FFD3E7; background-image: var(--pat-stars); background-size: 96px 96px; }
 .magic { display: flex; flex-direction: column; align-items: center; gap: 18px; }
-.magic__stage { --w: min(280px, 64vw); position: relative; width: var(--w); padding-bottom: calc(var(--w) * .47); margin-top: 10px; }
+.magic__stage { --w: min(280px, 64vw); position: relative; width: var(--w); padding-bottom: calc(var(--w) * .35); margin-top: 10px; }
 /* podium rosa: Chani queda parada arriba */
 .magic__podium {
-  position: absolute; left: -20%; bottom: 0; width: 140%; max-width: none; height: auto; z-index: 0;
+  position: absolute; left: -2%; bottom: 0; width: 104%; max-width: none; height: auto; z-index: 0;
   filter: drop-shadow(0 16px 18px rgba(143, 82, 172, .3));
 }
 .magic__card {
