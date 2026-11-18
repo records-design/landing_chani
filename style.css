@@ -492,6 +492,11 @@ ol, ul { list-style: none; }
 .magic__bubble { transition: top .35s ease, left .35s ease; }
 .magic__stage[data-who="sirena"] .magic__bubble { top: 27%; left: 50%; }
 
+/* celular y tablet: las caritas van debajo del subtítulo, antes que Chani */
+.twin .container { display: flex; flex-direction: column; }
+.twin .magic { order: 2; }
+.twin__cta { order: 1; margin-top: 18px; }
+
 /* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
@@ -588,7 +593,7 @@ ol, ul { list-style: none; }
     grid-template-rows: 1fr auto auto auto 1fr;
   }
   .twin .title { grid-area: title; text-align: left; white-space: nowrap; }
-  .twin .subtitle { grid-area: sub; text-align: left; margin: 14px 0 0; font-size: 20px; max-width: none; }
+  .twin .subtitle { grid-area: sub; text-align: left; margin: 30px 0 0; font-size: 20px; max-width: none; }
   .twin__cta { grid-area: cta; align-items: flex-start; margin-top: 56px; gap: 26px; }
   .twin__hint { text-align: left; }
   .avatars { justify-content: flex-start; }
