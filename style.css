@@ -594,6 +594,8 @@ ol, ul { list-style: none; }
   .hero__img img { max-height: calc(100vh - 150px); width: auto; margin: 0 auto; }
   .logo--big { align-items: flex-start; }
   .logo--big img { width: 440px; margin-left: -10px; }
+  /* badge centrado sobre "EL MUNDO DE" del logo */
+  .hero__kicker { align-self: flex-start; transform: translateX(calc(210px - 50%)); }
   .logo--big .logo__top { font-size: 38px; }
   .logo--big .logo__name { font-size: 140px; }
 
